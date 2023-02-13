@@ -1,0 +1,35 @@
+I ::=   "title:    PermutaBot \n"
+      ^ "author:   fb.me/atpsd - archivefever.tk@gmail.com \n"
+      ^ "language: italian \n"
+      ^ "status:   refinable \n"
+      ^ "topic:    politics \n"
+      ^ "comment:  permutatore di affermazione sincera \n"
+      ^ "warning:  in direzione ostinata e contraria \n"
+      ^ "created:  12/02/2023"
+;
+
+
+S ::= \ 
+      (
+            (
+                  il fascismo non "\232" 
+                  ( un'opinione ^"," "\232" un reato
+                  | un reato ^"," "\232" un'opinione )
+            )
+
+            |
+
+            (     il reato non "\232" 
+                  ( un'opinione ^"," "\232" un fascismo
+                  | un fascismo ^"," "\232" un'opinione )
+            )
+
+            |
+
+            (      l'opinione non "\232" 
+                  ( un fascismo ^"," "\232" un reato
+                  | un reato ^"," "\232" un fascismo )
+            )
+      )
+      ^"."
+;
