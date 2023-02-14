@@ -29,7 +29,7 @@ S ::= \\
             |
 
             (      la bocca \\n
-                  ( ah ^"," l'ora ^"..." &egrave mattino
+                  ( ah ^"," l'ora ^"..." \&egrave mattino
                   | ha il mattino nell'ora )
             )
       )
