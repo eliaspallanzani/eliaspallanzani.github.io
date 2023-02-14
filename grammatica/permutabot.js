@@ -1,6 +1,5 @@
     const grammar = `
 
-nes (29 sloc)  792 Bytes
 I ::=   "title:    PermutaBot \n"
       ^ "author:   fb.me/atpsd - archivefever.tk@gmail.com \n"
       ^ "language: italian \n"
