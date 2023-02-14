@@ -1,6 +1,6 @@
     const grammar = `
 
-I ::=   "title:    PermutaBot \\n"
+I ::=   "title:    PermutaBoh \\n"
       ^ "author:   fondazione elia spallanzani \\n"
       ^ "language: italian \\n"
       ^ "status:   refinable \\n"
