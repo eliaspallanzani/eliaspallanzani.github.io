@@ -3,7 +3,7 @@ I ::=   "title:    PermutaBot \n"
       ^ "language: italian \n"
       ^ "status:   refinable \n"
       ^ "topic:    politics \n"
-      ^ "comment:  permutatore di affermazione sincera \n"
+      ^ "comment:  permutatore di prova \n"
       ^ "warning:  in direzione ostinata e contraria \n"
       ^ "created:  12/02/2023"
 ;
@@ -12,23 +12,23 @@ I ::=   "title:    PermutaBot \n"
 S ::= \ 
       (
             (
-                  il fascismo non "\232" 
-                  ( un'opinione ^"," "\232" un reato
-                  | un reato ^"," "\232" un'opinione )
+                  il mattino 
+                  ( ha l'oro in bocca
+                  | alloro in bocca )
             )
 
             |
 
-            (     il reato non "\232" 
-                  ( un'opinione ^"," "\232" un fascismo
-                  | un fascismo ^"," "\232" un'opinione )
+            (     l'oro 
+                  ( ha il mattino in bocca
+                  | in bocca ^"," al mattino )
             )
 
             |
 
-            (      l'opinione non "\232" 
-                  ( un fascismo ^"," "\232" un reato
-                  | un reato ^"," "\232" un fascismo )
+            (      la bocca 
+                  ( ah ^"," l'ora ^"..." 
+                  | ha il mattino nell'ora )
             )
       )
       ^"."
