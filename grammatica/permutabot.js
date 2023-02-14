@@ -14,22 +14,22 @@ I ::=   "title:    PermutaBoh \\n"
 S ::= \\ 
       (
             (
-                  il mattino 
+                  il mattino \\n
                   ( ha l'oro in bocca
                   | alloro in bocca )
             )
 
             |
 
-            (     l'oro 
+            (     l'oro \\n
                   ( ha il mattino in bocca
                   | in bocca ^"," al mattino )
             )
 
             |
 
-            (      la bocca 
-                  ( ah ^"," l'ora ^"..." 
+            (      la bocca \\n
+                  ( ah ^"," l'ora ^"..." &egrave mattino
                   | ha il mattino nell'ora )
             )
       )
