@@ -1,17 +1,17 @@
     const grammar = `
 
-I ::=   "title:    PermutaBot \n"
-      ^ "author:   fb.me/atpsd - archivefever.tk@gmail.com \n"
-      ^ "language: italian \n"
-      ^ "status:   refinable \n"
-      ^ "topic:    politics \n"
-      ^ "comment:  permutatore di prova \n"
-      ^ "warning:  in direzione ostinata e contraria \n"
+I ::=   "title:    PermutaBot \\n"
+      ^ "author:   fondazione elia spallanzani \\n"
+      ^ "language: italian \\n"
+      ^ "status:   refinable \\n"
+      ^ "topic:    politics \\n"
+      ^ "comment:  permutatore di prova \\n"
+      ^ "warning:  in direzione ostinata e contraria \\n"
       ^ "created:  12/02/2023"
 ;
 
 
-S ::= \ 
+S ::= \\ 
       (
             (
                   il mattino 
