@@ -1,39 +1,122 @@
     const grammar = `
 
-I ::=   "title:    PermutaBoh \\n"
-      ^ "author:   fondazione elia spallanzani \\n"
-      ^ "language: italian \\n"
-      ^ "status:   refinable \\n"
-      ^ "topic:    politics \\n"
-      ^ "comment:  permutatore di prova \\n"
-      ^ "warning:  in direzione ostinata e contraria \\n"
-      ^ "created:  12/02/2023"
+I ::=   "title:    genera\\n"
+      ^ "author:   Fondazione Elia Spallanzani\\n"
+      ^ "language: italian\\n"
+      ^ "status:   esperimento\\n"
+      ^ "topic:    misc\\n"
+      ^ "audience: nascita di un erore\\n"
+      ^ "created:  21/04/2018"
 ;
 
-
 S ::= \\ 
-      (
-            (
-                  il mattino "<br>"
-                  ( ha l'oro  "<br>" in bocca
-                  | alloro in bocca )
+       Titolo  <br>
+      Intro  <br> <br>
+      Nome "-" Razza "," Classe "," Allineamento Allineamento </br>
+      le tue caratteristiche sono ":" </br>
+       Caratt Numero </br>
+       Caratt Numero ^Numero </br>
+       Caratt Numero </br></br>
+      Domanda </br>
+       Opzione1 </br>
+       Opzione2 Pagina </br>
+       Opzione3 "</br>
+;
+
+Titolo ::= (TEH INFINITE QUEST
+            | LOOPO SOLITARIO
+            | THE ENDLESS EBOOK
+            | EBOOK OF SAND
             )
+;
 
-            |
+Intro ::= (benvenuto nobile eroe "!" "," sei
+          | ancora qui "?" stavolta sei
+          | metti alla prova il tuo coraggio "!" ora sei
+          )
+;
 
-            (     l'oro "<br>"
-                  ( ha il mattino "<br>" in bocca
-                  | in bocca ^"," "<br>" al mattino )
+Nome ::= (Pippo | Franco.o | Baudo) (Pippo | Franco | Baudo)
+;
+
+Pippo ::= (P | C) ^ i ^ (++ cc (_ | ++ ^i) |++ pp | zz | tt) ^ o
+;
+
+Franco ::= (P |++ F) ^ ra ^ (n ^ (z |+ c) | (zz |+ cc)) ^ (o: [i^]o | i: i)
+;
+
+Baudo ::= (++ B | P) ^ a ^ (ud | ld | ul) ^ (i | o)
+;
+
+Classe ::= (+ mago |+ bardo | lardo | lago |+ ladro | bago | babbo | largo
+           | balbo | baldo | barbo | malgo | valvo | balgo | balvo | cargo
+           ) [^ "-" ^ Classe]
+;
+
+Razza ::= [semi^] ( [mezz'^] >(elfo | uomo | halfling |--- helder)
+                  | [mezzo ^ "-" ^] >(gnomo | coboldo)
+                  )
+;
+
+Allineamento ::= buono | ottimo | malvagio | legale | neutrale | pessimo
+              |  illegale | bello | cattivo | bravo
+;
+
+Caratt ::= forza | destrezza | costituzione  | carisma | digeribilita' | ingombro
+              |  mana | sanita' mentale | alito puro | intelligenza
+;
+
+Colore ::= AV ( red | brown | green | violet | orange ) CV
+;
+
+Pagina ::= Numero^Numero^Numero^Numero^Numero
+;
+
+Numero ::= 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 0
+;
+
+Domanda ::= (sei soddifatto di te o vuoi ritirare "?"
+            | davvero appropriato "!" che aspetti ad avventurarti "?"
+            | beh "," non proprio il massimo "," ma ci accontenteremo
+            | dovevano riformarti "," ma comunque "..."
+            | non fanno piu' gli eroi di una volta
+            | che imponenza "!" e adesso vai "!"
             )
+;
 
-            |
+Opzione1 ::= "<i><a href=".\"" ^">" Pzione1 ^"</a></i>"
+;
 
-            (      la bocca "<br>"
-                  ( ah ^"," l'ora ^"..." "<br>" "&egrave" mattino
-                  | ha il mattino "<br>" nell'ora )
+Opzione2 ::= "<i><a href"^UG^"incarico.php>" Pzione2 ^"</a></i>"
+;
+
+Opzione3 ::= "<i><a href=\".\"" ^">" Pzione3 ^"</a></i>"
+;
+
+Pzione1 ::= (ma che schifo "!" voglio ritirare
+            | preferivo un nano mezzo pitbull "," riprova
+            | questo allineamento e' contro la mia religione "," cambiamo
+            | non sono mai stato cosi' offeso "," rifammi "!"
+            | mmm "..."  andrebbe anche bene ma voglio cambiare "," cosi' "," senza motivo
+            | ci sarebbe molto da dire ma fai prima a ritirare
             )
-      )
-      ^"."
+;
+
+Pzione2      ::= (la mia vanita' e' sottisfatta "," andiamo avanti
+            | non vedo l'ora di pugnare "!"  portami immantinenti al dongione
+            | ti daro' corda per altri due minuti "," vediamo un po'
+            | yawn "," non mi annoiavo tanto dalle superiori "," proseguiamo
+            | ma le caratteristiche non erano sei "?" comunque dai "," ho fatto 30 "..."
+            | a a a "!" tifentero' patrone ti monto "!" "!" continua "!"
+            )
+;
+
+Pzione3      ::= (mi hai perso al secondo rigo "," ciao
+            | la mia soglia di attenzione e' 5 secondi "," addio
+            | che obs dio cane "!" me ne vado
+            | preferisco farmi bannare da facebook "," grazie
+            | zio sei rimasto agli anni 80 "," vatti a comprare le timberland
+            )
 ;
 
 `
