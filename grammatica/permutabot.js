@@ -12,15 +12,15 @@ I ::=   "title:    genera\\n"
 S ::= \\ 
        Titolo  <br>
       Intro  <br> <br>
-      Nome "-" Razza "," Classe "," Allineamento Allineamento </br>
-      le tue caratteristiche sono ":" </br>
-       Caratt Numero </br>
-       Caratt Numero ^Numero </br>
-       Caratt Numero </br></br>
-      Domanda </br>
-       Opzione1 </br>
-       Opzione2 Pagina </br>
-       Opzione3 "</br>
+      Nome "-" Razza "," Classe "," Allineamento Allineamento "</br>"
+      le tue caratteristiche sono ":"  "</br>"
+       Caratt Numero  "</br>"
+       Caratt Numero ^Numero  "</br>"
+       Caratt Numero  "</br>" "</br>"
+      Domanda  "</br>"
+       Opzione1  "</br>"
+       Opzione2 Pagina  "</br>"
+       Opzione3  "</br>"
 ;
 
 Titolo ::= (TEH INFINITE QUEST
