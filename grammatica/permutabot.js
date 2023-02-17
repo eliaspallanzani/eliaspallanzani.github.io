@@ -10,8 +10,8 @@ I ::=   "title:    genera\\n"
 ;
 
 S ::= \\ 
-       Titolo  <br>
-      Intro  <br> <br>
+       Titolo  "<br>"
+      Intro  "<br>" "<br>"
       Nome "-" Razza "," Classe "," Allineamento Allineamento "</br>"
       le tue caratteristiche sono ":"  "</br>"
        Caratt Numero  "</br>"
