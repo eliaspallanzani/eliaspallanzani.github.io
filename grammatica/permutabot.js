@@ -84,13 +84,13 @@ Domanda ::= (sei soddifatto di te o vuoi ritirare "?"
             )
 ;
 
-Opzione1 ::= "<i><a href=".\"" ^">" Pzione1 ^"</a></i>"
+Opzione1 ::= Pzione1
 ;
 
-Opzione2 ::= "<i><a href"^UG^"incarico.php>" Pzione2 ^"</a></i>"
+Opzione2 ::= Pzione2
 ;
 
-Opzione3 ::= "<i><a href=\".\"" ^">" Pzione3 ^"</a></i>"
+Opzione3 ::= Pzione3
 ;
 
 Pzione1 ::= (ma che schifo "!" voglio ritirare
