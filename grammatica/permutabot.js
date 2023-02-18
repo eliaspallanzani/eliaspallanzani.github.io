@@ -99,7 +99,7 @@ Opzione2 ::= Pzione2
 Opzione3 ::= Pzione3
 ;
 
-Pzione1 ::= (ma che schifo ^"!" voglio "<a href=https://www.eliaspallanzani.github.io/pippo/>" ritirare "</a>"
+Pzione1 ::= (ma che schifo ^"!" voglio "<a href=https://www.eliaspallanzani.github.io/pippo.html>" ritirare "</a>"
             | preferivo un Razza Classe ^"," riprova ^"."
             | questo allineamento "&egrave" contro la mia religione ^"," cambiamo ^"."
             | non sono mai stato cos ^"&igrave" offeso ^"," rifammi ^"!"
