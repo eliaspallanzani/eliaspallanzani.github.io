@@ -92,7 +92,7 @@ Opzione2 ::= Pzione2
 Opzione3 ::= Pzione3
 ;
 
-Pzione1 ::= (ma che schifo "!" voglio "<a href=https://"""www.w3schools.com/"">" ritirare "</a>"
+Pzione1 ::= (ma che schifo "!" voglio "<a href=https:/""&#47"""www.w3schools.com/"">" ritirare "</a>"
             | preferivo un nano mezzo pitbull "," riprova
             | questo allineamento e' contro la mia religione "," cambiamo
             | non sono mai stato cosi' offeso "," rifammi "!"
