@@ -17,9 +17,9 @@ S ::= \\ Titolo  "<br>"
        Caratt Numero ^Numero  "</br>"
        Caratt Numero  "</br>" "</br>"
       Domanda  "</br>" "</br>" 
-       Opzione1  "</br>"
-       Opzione2 Pagina  "</br>"
-       Opzione3  "</br>"
+       "<i>" Opzione1 "</i>" "</br>" "</br>"
+     "<i>"  Opzione2 Pagina "</i>" "</br>" "</br>"
+     "<i>"  Opzione3 "</i>" "</br>"
 ;
 
 Titolo ::= (teh infinite quest
