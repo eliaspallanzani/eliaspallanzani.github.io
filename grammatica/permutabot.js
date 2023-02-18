@@ -22,10 +22,10 @@ S ::= \\ Titolo  "<br>"
        Opzione3  "</br>"
 ;
 
-Titolo ::= (TEH INFINITE QUEST
-            | LOOPO SOLITARIO
-            | THE ENDLESS EBOOK
-            | EBOOK OF SAND
+Titolo ::= (teh infinite quest
+            | loopo solotario
+            | the endless ebook
+            | ebook of sand
             )
 ;
 
@@ -38,13 +38,13 @@ Intro ::= (benvenuto nobile eroe "!" "," sei
 Nome ::= (Pippo | Franco.o | Baudo) (Pippo | Franco | Baudo)
 ;
 
-Pippo ::= (P | C) ^ i ^ (++ cc (_ | ++ ^i) |++ pp | zz | tt) ^ o
+Pippo ::= (p | c) ^ i ^ (++ cc (_ | ++ ^i) |++ pp | zz | tt) ^ o
 ;
 
-Franco ::= (P |++ F) ^ ra ^ (n ^ (z |+ c) | (zz |+ cc)) ^ (o: [i^]o | i: i)
+Franco ::= (p |++ f) ^ ra ^ (n ^ (z |+ c) | (zz |+ cc)) ^ (o: [i^]o | i: i)
 ;
 
-Baudo ::= (++ B | P) ^ a ^ (ud | ld | ul) ^ (i | o)
+Baudo ::= (++ b | p) ^ a ^ (ud | ld | ul) ^ (i | o)
 ;
 
 Classe ::= (+ mago |+ bardo | lardo | lago |+ ladro | bago | babbo | largo
