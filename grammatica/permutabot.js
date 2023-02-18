@@ -9,23 +9,23 @@ I ::=   "title:    genera\\n"
       ^ "created:  21/04/2018"
 ;
 
-S ::= "<b>" \\ Titolo "</b> <br>"
+S ::= "<b>" Titolo "</b> <br>"
       Intro  "<br> <br>"
       Nome "-" Razza ^"," Classe ^"," Allineamento Allineamento "</br>"
       le tue caratteristiche sono ^":"  "<br>"
        Caratt Numero  "<br>"
        Caratt Numero ^Numero  "<br>"
        Caratt Numero  "<br> <br>"
-      Domanda  "<br> <br>" 
-       "<i>" Opzione1 "</i> <br> <br>"
-     "<i>"  Opzione2 Pagina "</i> <br> <br>"
-     "<i>"  Opzione3 "</i> <br>"
+     \\ Domanda  "<br> <br>" 
+       "<i>" \\ Opzione1 "</i> <br> <br>"
+     "<i>"  \\ Opzione2 Pagina "</i> <br> <br>"
+     "<i>" \\ Opzione3 "</i> <br>"
 ;
 
-Titolo ::= (teh infinite quest
-            | loopo solotario
-            | the endless ebook
-            | ebook of sand
+Titolo ::= ( \\ teh \\ infinite \\ quest
+            | \\ looppo \\ solitario
+            | \\ the \\ endless \\ ebook
+            | \\ ebook of \\ sand
             )
 ;
 
@@ -74,12 +74,12 @@ Numero ::= ( 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 0
            )
 ;
 
-Domanda ::= (\\sei soddifatto di te o vuoi ritirare ^"?"
-            | \\davvero appropriato "!" che aspetti ad avventurarti ^"?"
-            | \\beh^"," non proprio il massimo ^"," ma ci accontenteremo
-            | \\dovevano riformarti ^"," ma comunque ^"..."
-            | \\non fanno piu' gli eroi di una volta
-            | \\che imponenza ^"!" e adesso vai ^"!"
+Domanda ::= ( sei soddifatto di te o vuoi ritirare ^"?"
+            | davvero appropriato "!" che aspetti ad avventurarti ^"?"
+            | beh^"," non proprio il massimo ^"," ma ci accontenteremo
+            | dovevano riformarti ^"," ma comunque ^"..."
+            | non fanno piu' gli eroi di una volta
+            | che imponenza ^"!" e adesso vai ^"!"
             )
 ;
 
@@ -93,7 +93,7 @@ Opzione3 ::= Pzione3
 ;
 
 Pzione1 ::= (ma che schifo ^"!" voglio "<a href=https://www.google.com/>" ritirare "</a>"
-            | preferivo un nano mezzo pitbull ^"," riprova
+            | preferivo un Razza Classe ^"," riprova
             | questo allineamento e' contro la mia religione ^"," cambiamo
             | non sono mai stato cosi' offeso ^"," rifammi ^"!"
             | mmm ^"..."  andrebbe anche bene ma voglio cambiare ^"," cosi' ^"," senza motivo
@@ -101,7 +101,7 @@ Pzione1 ::= (ma che schifo ^"!" voglio "<a href=https://www.google.com/>" ritira
             )
 ;
 
-Pzione2 ::= (la mia vanita' e' sottisfatta ^"," andiamo avanti
+Pzione2 ::= (la mia vanita' e' soddisfatta ^"," andiamo avanti
             | non vedo l'ora di pugnare ^"!"  portami immantinenti al dongione
             | ti daro' corda per altri due minuti ^"," vediamo un po'
             | yawn ^"," non mi annoiavo tanto dalle superiori ^"," proseguiamo
