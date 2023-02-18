@@ -84,9 +84,9 @@ Unitempo ::= ( minuti | secondi | millisecondi | quarti d'ora | battiti di cuore
 Domanda ::= ( sei soddifatto di te o vuoi ritirare ^"?"
             | davvero appropriato ^"!" che aspetti ad avventurarti ^"?"
             | beh^"," non proprio il massimo ^"," ma ci accontenteremo ^"."
-            | dovevano riformarti ^"," ma comunque ^"..."
+            | dovevano riformarti ^"," ma comunque ^"..." ora che vuoi fare ^"?"
             | non fanno pi ^"&ugrave" gli eroi di una volta ^"."
-            | che imponenza ^"!" e adesso vai ^"!"
+            | che imponenza ^"!" e adesso vai ^"!" \\ o tu come la vedi ^"?"
             )
 ;
 
@@ -99,27 +99,27 @@ Opzione2 ::= Pzione2
 Opzione3 ::= Pzione3
 ;
 
-Pzione1 ::= (ma che schifo ^"!" voglio "<a href=https://www.eliaspallanzani.github.io/pippo>" ritirare "</a>"
-            | preferivo un Razza Classe ^"," "<a href=pippo.html>" riprova "</a>" ^"."
-            | questo allineamento "&egrave" contro la mia religione ^"," cambiamo ^"."
-            | non sono mai stato cos ^"&igrave" offeso ^"," rifammi ^"!"
-            | mmm ^"..."  andrebbe anche bene ma voglio cambiare ^"," cos ^"&igrave" ^"," senza motivo ^"."
-            | ci sarebbe molto da dire ma fai prima a ritirare ^"."
+Pzione1 ::= (ma che schifo ^"!" voglio "<a href=index.html>" ritirare "</a>"
+            | preferivo un Razza Classe ^"," "<a href=index.html>" riprova "</a>" ^"."
+            | questo allineamento "&egrave" contro la mia religione ^"," "<a href=index.html>" cambiamo "</a>" ^"."
+            | non sono mai stato cos ^"&igrave" offeso ^"," "<a href=index.html>" rifammi "</a>" ^"!"
+            | mmm ^"..."  andrebbe anche bene ma voglio "<a href=index.html>" cambiare "</a>" ^"," cos ^"&igrave" ^"," senza motivo ^"."
+            | ci sarebbe molto da dire ma fai prima a "<a href=index.html>" ritirare "</a>" ^"."
             )
 ;
 
-Pzione2 ::= (la mia vanit ^"&agrave" "&egrave" soddisfatta ^"," andiamo avanti
-            | non vedo l'ora di pugnare ^"!"  portami immantinenti al dongione
-            | ti dar ^"&ograve" corda per altri Numlett Unitempo ^"," vediamo un po'
-            | yawn ^"," non mi annoiavo tanto dalle superiori ^"," proseguiamo
-            | ma le caratteristiche non erano sei ^"?" comunque dai ^"," ho fatto 30 ^"," facciamo 31 ^"..."
-            | a a a ^"!" tifenter ^"&ograve" patrone ti monto ^"!" ^"!" continua ^"!"
+Pzione2 ::= (la mia vanit ^"&agrave" "&egrave" soddisfatta ^"," andiamo "<a href=pippo.html>" avanti "</a>" ^"."
+            | non vedo l'ora di pugnare ^"!"  portami immantinenti al "<a href=pippo.html>" dongione "</a>" ^"."
+            | ti dar ^"&ograve" corda per altri Numlett Unitempo ^"," "<a href=pippo.html>" vediamo un po' "</a>" ^"."
+            | yawn ^"," non mi annoiavo tanto dalle superiori ^"," "<a href=pippo.html>" proseguiamo "</a>" ^"."
+            | ma le caratteristiche non erano sei ^"?" comunque dai ^"," ho fatto 30 ^"," "<a href=pippo.html>" facciamo 31 "</a>" ^"..."
+            | a a a ^"!" tifenter ^"&ograve" patrone ti monto ^"!" ^"!" "<a href=pippo.html>" continua "</a>" ^"!"
             )
 ;
 
-Pzione3 ::= (mi hai perso al secondo rigo ^"," ciao ^"."
+Pzione3 ::= (mi hai perso al secondo rigo ^"," "<a href=https://www.twitter.com>" ciao "</a>" ^"." ^"."
             | la mia soglia di attenzione "&egrave" di Numlett secondi ^"," addio ^"."
-            | che obs dio cane ^"!" me ne vado
+            | che obs dio cane ^"!" me ne vado ^"."
             | preferisco farmi bannare da facebook ^"," grazie ^"."
             | zio sei rimasto agli anni 80 "," vatti a comprare le timberland ^"."
             )
