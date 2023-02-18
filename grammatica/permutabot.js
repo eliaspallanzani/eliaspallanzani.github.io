@@ -9,17 +9,17 @@ I ::=   "title:    genera\\n"
       ^ "created:  21/04/2018"
 ;
 
-S ::= \\ "<b>" Titolo "</b> <br>"
-      Intro  "<br>" "<br>"
+S ::= "<b>" \\ Titolo "</b> <br>"
+      Intro  "<br> <br>"
       Nome "-" Razza ^"," Classe ^"," Allineamento Allineamento "</br>"
-      le tue caratteristiche sono ^":"  "</br>"
-       Caratt Numero  "</br>"
-       Caratt Numero ^Numero  "</br>"
-       Caratt Numero  "</br>" "</br>"
-      Domanda  "</br>" "</br>" 
-       "<i>" Opzione1 "</i>" "</br>" "</br>"
-     "<i>"  Opzione2 Pagina "</i>" "</br>" "</br>"
-     "<i>"  Opzione3 "</i>" "</br>"
+      le tue caratteristiche sono ^":"  "<br>"
+       Caratt Numero  "<br>"
+       Caratt Numero ^Numero  "<br>"
+       Caratt Numero  "<br> <br>"
+      Domanda  "<br> <br>" 
+       "<i>" Opzione1 "</i> <br> <br>"
+     "<i>"  Opzione2 Pagina "</i> <br> <br>"
+     "<i>"  Opzione3 "</i> <br>"
 ;
 
 Titolo ::= (teh infinite quest
@@ -74,10 +74,10 @@ Numero ::= ( 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 0
            )
 ;
 
-Domanda ::= (\\sei soddifatto di te o vuoi ritirare "?"
-            | \\davvero appropriato "!" che aspetti ad avventurarti "?"
+Domanda ::= (\\sei soddifatto di te o vuoi ritirare ^"?"
+            | \\davvero appropriato "!" che aspetti ad avventurarti ^"?"
             | \\beh^"," non proprio il massimo ^"," ma ci accontenteremo
-            | \\dovevano riformarti ^"," ma comunque "..."
+            | \\dovevano riformarti ^"," ma comunque ^"..."
             | \\non fanno piu' gli eroi di una volta
             | \\che imponenza ^"!" e adesso vai ^"!"
             )
