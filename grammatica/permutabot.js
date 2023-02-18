@@ -11,8 +11,8 @@ I ::=   "title:    genera\\n"
 
 S ::= \\ Titolo  "<br>"
       Intro  "<br>" "<br>"
-      Nome "-" Razza "," Classe "," Allineamento Allineamento "</br>"
-      le tue caratteristiche sono ":"  "</br>"
+      Nome "-" Razza ^"," Classe ^"," Allineamento Allineamento "</br>"
+      le tue caratteristiche sono ^":"  "</br>"
        Caratt Numero  "</br>"
        Caratt Numero ^Numero  "</br>"
        Caratt Numero  "</br>" "</br>"
@@ -29,9 +29,9 @@ Titolo ::= (teh infinite quest
             )
 ;
 
-Intro ::= (benvenuto nobile eroe "!" "," sei
-          | ancora qui "?" stavolta sei
-          | metti alla prova il tuo coraggio "!" ora sei
+Intro ::= (benvenuto nobile eroe ^"!" "," sei
+          | ancora qui ^"?" stavolta sei
+          | metti alla prova il tuo coraggio ^"!" ora sei
           )
 ;
 
@@ -92,26 +92,26 @@ Opzione2 ::= Pzione2
 Opzione3 ::= Pzione3
 ;
 
-Pzione1 ::= (ma che schifo "!" voglio "<a href=https:""&#47""&#47"//"www"."w3schools"."com//""&#47"">" ritirare "</a>"
-            | preferivo un nano mezzo pitbull "," riprova
-            | questo allineamento e' contro la mia religione "," cambiamo
-            | non sono mai stato cosi' offeso "," rifammi "!"
-            | mmm "..."  andrebbe anche bene ma voglio cambiare "," cosi' "," senza motivo
+Pzione1 ::= (ma che schifo ^"!" voglio "<a href=https:""&#47""&#47"//"www.w3schools.com//""&#47"">" ritirare "</a>"
+            | preferivo un nano mezzo pitbull ^"," riprova
+            | questo allineamento e' contro la mia religione ^"," cambiamo
+            | non sono mai stato cosi' offeso ^"," rifammi "!"
+            | mmm ^"..."  andrebbe anche bene ma voglio cambiare ^"," cosi' ^"," senza motivo
             | ci sarebbe molto da dire ma fai prima a ritirare
             )
 ;
 
-Pzione2 ::= (la mia vanita' e' sottisfatta "," andiamo avanti
-            | non vedo l'ora di pugnare "!"  portami immantinenti al dongione
-            | ti daro' corda per altri due minuti "," vediamo un po'
-            | yawn "," non mi annoiavo tanto dalle superiori "," proseguiamo
-            | ma le caratteristiche non erano sei "?" comunque dai "," ho fatto 30 "..."
-            | a a a "!" tifentero' patrone ti monto "!" "!" continua "!"
+Pzione2 ::= (la mia vanita' e' sottisfatta ^"," andiamo avanti
+            | non vedo l'ora di pugnare ^"!"  portami immantinenti al dongione
+            | ti daro' corda per altri due minuti ^"," vediamo un po'
+            | yawn ^"," non mi annoiavo tanto dalle superiori "," proseguiamo
+            | ma le caratteristiche non erano sei ^"?" comunque dai "," ho fatto 30 "..."
+            | a a a ^"!" tifentero' patrone ti monto ^"!" "!" continua "!"
             )
 ;
 
-Pzione3 ::= (mi hai perso al secondo rigo "," ciao
-            | la mia soglia di attenzione e' 5 secondi "," addio
+Pzione3 ::= (mi hai perso al secondo rigo ^"," ciao
+            | la mia soglia di attenzione e' 5 secondi ^"," addio
             | che obs dio cane "!" me ne vado
             | preferisco farmi bannare da facebook "," grazie
             | zio sei rimasto agli anni 80 "," vatti a comprare le timberland
