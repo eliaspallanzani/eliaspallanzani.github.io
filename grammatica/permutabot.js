@@ -17,9 +17,9 @@ S ::= "<b>" Titolo "</b> <br>"
        Caratt Numero ^Numero  "<br>"
        Caratt Numero  "<br> <br>"
      \\ Domanda  "<br> <br>" 
-       "<i>" \\ Opzione1 "<br> <br>"
+       "<i>" { \\ Opzione1 "<br> <br>"
              \\ Opzione2 Pagina "<br> <br>"
-             \\ Opzione3 "</i> <br>"
+             \\ Opzione3 } "</i> <br>"
 ;
 
 Titolo ::= ( \\ teh \\ infinite \\ quest
@@ -78,11 +78,14 @@ Numlett ::= ( due | tre | quattro | cinque | sei | sette | otto | nove | settord
             )
 ;
 
-Unitempo ::= ( minuti | secondi | millisecondi | quarti d'ora | battiti di cuore | picosecondi )
+Unitempo ::= ( minuti | Secondi | quarti d'ora | battiti di cuore )
+;
+
+Secondi ::= ( _ | milli | micro | pico | femto | nano ) secondi
 ;
 
 Domanda ::= ( sei soddifatto di te o vuoi ritirare ^"?"
-            | davvero appropriato ^"!" che aspetti ad avventurarti ^"?"
+            | davvero appropriato ^"!" \\ che aspetti ad avventurarti ^"?"
             | beh^"," non proprio il massimo ^"," ma ci accontenteremo ^"."
             | dovevano riformarti ^"," ma comunque ^"..." ora che vuoi fare ^"?"
             | non fanno pi ^"&ugrave" gli eroi di una volta ^"."
@@ -99,7 +102,7 @@ Opzione2 ::= Pzione2
 Opzione3 ::= Pzione3
 ;
 
-Pzione1 ::= (ma che schifo ^"!" voglio "<a href=index.html>" ritirare "</a>"
+Pzione1 ::= (ma che schifo ^"!" voglio "<a href=index.html>" ritirare "</a>" "."
             | preferivo un Razza Classe ^"," "<a href=index.html>" riprova "</a>" ^"."
             | questo allineamento "&egrave" contro la mia religione ^"," "<a href=index.html>" cambiamo "</a>" ^"."
             | non sono mai stato cos ^"&igrave" offeso ^"," "<a href=index.html>" rifammi "</a>" ^"!"
