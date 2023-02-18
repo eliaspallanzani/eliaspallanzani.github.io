@@ -92,7 +92,8 @@ Domanda ::= ( sei soddifatto di te o vuoi ritirare ^"?"
             )
 ;
 
-Opzioni ::= { \\ Opzione1 "<br>" | \\ Opzione2 "<br>" | \\ Opzione3 "<br>" }
+Opzioni ::= { \\ Opzione1 "<br>" } { \\ Opzione2 "<br>" } { \\ Opzione3 "<br>" }
+;
 
 Opzione1 ::= Pzione1
 ;
