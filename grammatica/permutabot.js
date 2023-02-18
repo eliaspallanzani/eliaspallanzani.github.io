@@ -17,7 +17,7 @@ S ::= "<b>" Titolo "</b> <br>"
        Caratt Numero ^Numero  "<br>"
        Caratt Numero  "<br> <br>"
      \\ Domanda  "<br> <br>" 
-        Sim Sim Sim Sim "<br>"
+        Sim Sim Sim Sim "<br> <br>"
        "<i>" Opzioni "</i> <br>"
 ;
 
@@ -92,7 +92,7 @@ Domanda ::= ( sei soddifatto di te o vuoi ritirare ^"?"
             )
 ;
 
-Opzioni ::= { \\ Opzione1 "<br>" } { \\ Opzione2 "<br>" } { \\ Opzione3 "<br>" }
+Opzioni ::= { \\ Opzione1 "<br> <br>" } { \\ Opzione2 "<br> <br>" } { \\ Opzione3 "<br> <br>" }
 ;
 
 Opzione1 ::= Pzione1
@@ -130,7 +130,7 @@ Pzione3 ::= (mi hai perso al secondo rigo ^"," "<a href=https://www.twitter.com>
             )
 ;
 
-Sim ::= ( "&larr" | "&uarr" | "&darr" | "&rarr" )
+Sim ::= ( "&#8592" | "&#8593" | "&#8594" | "&#8595" )
 ;
 
 `
