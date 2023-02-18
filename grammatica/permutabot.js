@@ -92,10 +92,10 @@ Opzione2 ::= Pzione2
 Opzione3 ::= Pzione3
 ;
 
-Pzione1 ::= (ma che schifo ^"!" voglio "<a href=https:" "&#47" "&#47" "&quot" www.w3schools.com "&quot" "&#47" ">" ritirare "</a>"
+Pzione1 ::= (ma che schifo ^"!" voglio "<a href=https://""&quot"www.w3schools.com"&quot""/>" ritirare "</a>"
             | preferivo un nano mezzo pitbull ^"," riprova
             | questo allineamento e' contro la mia religione ^"," cambiamo
-            | non sono mai stato cosi' offeso ^"," rifammi "!"
+            | non sono mai stato cosi' offeso ^"," rifammi ^"!"
             | mmm ^"..."  andrebbe anche bene ma voglio cambiare ^"," cosi' ^"," senza motivo
             | ci sarebbe molto da dire ma fai prima a ritirare
             )
@@ -104,9 +104,9 @@ Pzione1 ::= (ma che schifo ^"!" voglio "<a href=https:" "&#47" "&#47" "&quot" ww
 Pzione2 ::= (la mia vanita' e' sottisfatta ^"," andiamo avanti
             | non vedo l'ora di pugnare ^"!"  portami immantinenti al dongione
             | ti daro' corda per altri due minuti ^"," vediamo un po'
-            | yawn ^"," non mi annoiavo tanto dalle superiori "," proseguiamo
-            | ma le caratteristiche non erano sei ^"?" comunque dai "," ho fatto 30 "..."
-            | a a a ^"!" tifentero' patrone ti monto ^"!" "!" continua "!"
+            | yawn ^"," non mi annoiavo tanto dalle superiori ^"," proseguiamo
+            | ma le caratteristiche non erano sei ^"?" comunque dai ^"," ho fatto 30 "..."
+            | a a a ^"!" tifentero' patrone ti monto ^"!" ^"!" continua ^"!"
             )
 ;
 
