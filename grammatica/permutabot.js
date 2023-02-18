@@ -11,11 +11,11 @@ I ::=   "title:    genera\\n"
 
 S ::= "<b>" Titolo "</b> <br>"
     \\ Intro  "<br> <br>"
-      Nome "-" Razza ^"," Classe ^"," Allineamento Allineamento "<br>"
-      le tue caratteristiche sono ^":"  "<br>"
+      Nome "-" Razza ^"," Classe ^"," Allineamento Allineamento ^"." "<br> <br>"
+      \\ le tue caratteristiche sono ^":"  "<br>"
        Caratt Numero  "<br>"
        Caratt Numero ^Numero  "<br>"
-       Caratt Numero  "<br> <br>"
+       Caratt Numero "<br> <br>"
      \\ Domanda  "<br> <br>" 
         Sim Sim Sim Sim "<br> <br>"
        "<i>" Opzioni "</i> <br>"
@@ -28,8 +28,8 @@ Titolo ::= ( \\ teh \\ infinite \\ quest
             )
 ;
 
-Intro ::= (benvenuto nobile eroe ^"!" "," \\ tu sei
-          | ancora qui ^"?" stavolta sei
+Intro ::= (benvenuto nobile eroe ^"!" \\ tu sei
+          | ancora qui ^"?" \\ stavolta sei
           | metti alla prova il tuo coraggio ^"!" \\ ora sei
           )
 ;
