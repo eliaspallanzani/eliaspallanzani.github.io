@@ -16,7 +16,7 @@ S ::= \\ Titolo  "<br>"
        Caratt Numero  "</br>"
        Caratt Numero ^Numero  "</br>"
        Caratt Numero  "</br>" "</br>"
-      Domanda  "</br>"
+      Domanda  "</br>" "</br>" 
        Opzione1  "</br>"
        Opzione2 Pagina  "</br>"
        Opzione3  "</br>"
@@ -38,13 +38,13 @@ Intro ::= (benvenuto nobile eroe "!" "," sei
 Nome ::= (Pippo | Franco.o | Baudo) (Pippo | Franco | Baudo)
 ;
 
-Pippo ::= (p | c) ^ i ^ (++ cc (_ | ++ ^i) |++ pp | zz | tt) ^ o
+Pippo ::= (\\p | \\c) ^ i ^ (++ cc (_ | ++ ^i) |++ pp | zz | tt) ^ o
 ;
 
-Franco ::= (p |++ f) ^ ra ^ (n ^ (z |+ c) | (zz |+ cc)) ^ (o: [i^]o | i: i)
+Franco ::= (\\p |++ \\f) ^ ra ^ (n ^ (z |+ c) | (zz |+ cc)) ^ (o: [i^]o | i: i)
 ;
 
-Baudo ::= (++ b | p) ^ a ^ (ud | ld | ul) ^ (i | o)
+Baudo ::= (++ \\b | \\p) ^ a ^ (ud | ld | ul) ^ (i | o)
 ;
 
 Classe ::= (+ mago |+ bardo | lardo | lago |+ ladro | bago | babbo | largo
@@ -74,7 +74,7 @@ Numero ::= ( 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 0
            )
 ;
 
-Domanda ::= (sei soddifatto di te o vuoi ritirare "?"
+Domanda ::= (\\sei soddifatto di te o vuoi ritirare "?"
             | davvero appropriato "!" che aspetti ad avventurarti "?"
             | beh "," non proprio il massimo "," ma ci accontenteremo
             | dovevano riformarti "," ma comunque "..."
@@ -92,7 +92,7 @@ Opzione2 ::= Pzione2
 Opzione3 ::= Pzione3
 ;
 
-Pzione1 ::= (ma che schifo "!" voglio ritirare
+Pzione1 ::= (ma che schifo "!" voglio "<a href="https://www.w3schools.com/">"ritirare"</a>"
             | preferivo un nano mezzo pitbull "," riprova
             | questo allineamento e' contro la mia religione "," cambiamo
             | non sono mai stato cosi' offeso "," rifammi "!"
