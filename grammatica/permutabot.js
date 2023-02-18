@@ -17,6 +17,7 @@ S ::= "<b>" Titolo "</b> <br>"
        Caratt Numero ^Numero  "<br>"
        Caratt Numero  "<br> <br>"
      \\ Domanda  "<br> <br>" 
+        Sim Sim Sim Sim "<br>"
        "<i>" Opzioni "</i> <br>"
 ;
 
@@ -126,6 +127,9 @@ Pzione3 ::= (mi hai perso al secondo rigo ^"," "<a href=https://www.twitter.com>
             | preferisco farmi bannare da facebook ^"," grazie ^"."
             | zio sei rimasto agli anni 80 "," vatti a comprare le timberland ^"."
             )
+;
+
+Sim ::= ( "&larr" | "&uarr" | "&darr" | "&rarr" )
 ;
 
 `
