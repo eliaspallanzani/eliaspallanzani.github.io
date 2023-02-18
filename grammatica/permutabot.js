@@ -10,7 +10,7 @@ I ::=   "title:    genera\\n"
 ;
 
 S ::= "<b>" Titolo "</b> <br>"
-      Intro  "<br> <br>"
+    \\ Intro  "<br> <br>"
       Nome "-" Razza ^"," Classe ^"," Allineamento Allineamento "</br>"
       le tue caratteristiche sono ^":"  "<br>"
        Caratt Numero  "<br>"
@@ -18,8 +18,8 @@ S ::= "<b>" Titolo "</b> <br>"
        Caratt Numero  "<br> <br>"
      \\ Domanda  "<br> <br>" 
        "<i>" \\ Opzione1 "</i> <br> <br>"
-     "<i>"  \\ Opzione2 Pagina "</i> <br> <br>"
-     "<i>" \\ Opzione3 "</i> <br>"
+       "<i>"  \\ Opzione2 Pagina "</i> <br> <br>"
+       "<i>" \\ Opzione3 "</i> <br>"
 ;
 
 Titolo ::= ( \\ teh \\ infinite \\ quest
@@ -29,9 +29,9 @@ Titolo ::= ( \\ teh \\ infinite \\ quest
             )
 ;
 
-Intro ::= (benvenuto nobile eroe ^"!" "," sei
+Intro ::= (benvenuto nobile eroe ^"!" "," \\ tu sei
           | ancora qui ^"?" stavolta sei
-          | metti alla prova il tuo coraggio ^"!" ora sei
+          | metti alla prova il tuo coraggio ^"!" \\ ora sei
           )
 ;
 
@@ -62,8 +62,8 @@ Allineamento ::= ( buono | ottimo | malvagio | legale | neutrale | pessimo
               )
 ;
 
-Caratt ::= ( forza | destrezza | costituzione  | carisma | digeribilita' | ingombro
-              |  mana | sanita' mentale | alito puro | intelligenza
+Caratt ::= ( forza | destrezza | costituzione  | carisma | digeribilit ^"&agrave" | ingombro
+              |  mana | sanit ^"&agrave" mentale | alito puro | intelligenza
               )
 ;
 
@@ -74,11 +74,15 @@ Numero ::= ( 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 0
            )
 ;
 
+Numlett ::= ( due | tre | quattro | cinque | sei | sette | otto | nove | settordici
+            )
+;
+
 Domanda ::= ( sei soddifatto di te o vuoi ritirare ^"?"
             | davvero appropriato "!" che aspetti ad avventurarti ^"?"
-            | beh^"," non proprio il massimo ^"," ma ci accontenteremo
+            | beh^"," non proprio il massimo ^"," ma ci accontenteremo ^"."
             | dovevano riformarti ^"," ma comunque ^"..."
-            | non fanno piu' gli eroi di una volta
+            | non fanno piu' gli eroi di una volta ^"."
             | che imponenza ^"!" e adesso vai ^"!"
             )
 ;
@@ -94,27 +98,27 @@ Opzione3 ::= Pzione3
 
 Pzione1 ::= (ma che schifo ^"!" voglio "<a href=https://www.google.com/>" ritirare "</a>"
             | preferivo un Razza Classe ^"," riprova
-            | questo allineamento e' contro la mia religione ^"," cambiamo
+            | questo allineamento "&egrave" contro la mia religione ^"," cambiamo
             | non sono mai stato cosi' offeso ^"," rifammi ^"!"
             | mmm ^"..."  andrebbe anche bene ma voglio cambiare ^"," cosi' ^"," senza motivo
             | ci sarebbe molto da dire ma fai prima a ritirare
             )
 ;
 
-Pzione2 ::= (la mia vanita' e' soddisfatta ^"," andiamo avanti
+Pzione2 ::= (la mia vanit ^"&agrave" "&egrave" soddisfatta ^"," andiamo avanti
             | non vedo l'ora di pugnare ^"!"  portami immantinenti al dongione
-            | ti daro' corda per altri due minuti ^"," vediamo un po'
+            | ti daro' corda per altri Numlett minuti ^"," vediamo un po'
             | yawn ^"," non mi annoiavo tanto dalle superiori ^"," proseguiamo
-            | ma le caratteristiche non erano sei ^"?" comunque dai ^"," ho fatto 30 "..."
+            | ma le caratteristiche non erano sei ^"?" comunque dai ^"," ho fatto 30 ^"," facciamo 31 ^"..."
             | a a a ^"!" tifentero' patrone ti monto ^"!" ^"!" continua ^"!"
             )
 ;
 
-Pzione3 ::= (mi hai perso al secondo rigo ^"," ciao
-            | la mia soglia di attenzione e' 5 secondi ^"," addio
-            | che obs dio cane "!" me ne vado
-            | preferisco farmi bannare da facebook "," grazie
-            | zio sei rimasto agli anni 80 "," vatti a comprare le timberland
+Pzione3 ::= (mi hai perso al secondo rigo ^"," ciao ^"."
+            | la mia soglia di attenzione "&egrave" Numlett ^"," addio ^"."
+            | che obs dio cane ^"!" me ne vado
+            | preferisco farmi bannare da facebook ^"," grazie ^"."
+            | zio sei rimasto agli anni 80 "," vatti a comprare le timberland ^"."
             )
 ;
 
