@@ -117,20 +117,20 @@ Pzione2 ::= (la mia vanit ^"&agrave" "&egrave" soddisfatta ^"," andiamo "<a href
             | non vedo l'ora di pugnare ^"!"  portami immantinenti al "<a href=pippo.html>" dongione "</a>" ^"."
             | ti dar ^"&ograve" corda per altri Numlett Unitempo ^"," "<a href=pippo.html>" vediamo un po' "</a>" ^"."
             | yawn ^"," non mi annoiavo tanto dalle superiori ^"," "<a href=pippo.html>" proseguiamo "</a>" ^"."
-            | ma le caratteristiche non erano sei ^"?" comunque dai ^"," ho fatto 30 ^"," "<a href=pippo.html>" facciamo 31 "</a>" "..."
-            | a a a ^"!" tifenter ^"&ograve" patrone ti monto ^"!" ^"!" "<a href=pippo.html>" continua "</a>" ^"!"
+            | ma le caratteristiche non erano Numlett ^"?" comunque dai ^"," ho fatto 30 ^"," "<a href=pippo.html>" facciamo 31 "</a>" "..."
+            | a a a ^"," tifenter ^"&ograve" patrone ti monto ^"!" ^"!" "<a href=pippo.html>" \\ continua "</a>" ^"!"
             )
 ;
 
-Pzione3 ::= (mi hai perso al secondo rigo ^"," "<a href=https://www.twitter.com>" ciao "</a>" ^"." ^"."
+Pzione3 ::= (mi hai perso al secondo rigo ^"," "<a href=https://www.twitter.com>" ciao "</a>" ^"."
             | la mia soglia di attenzione "&egrave" di Numlett secondi ^"," addio ^"."
-            | che obs dio cane ^"!" me ne vado ^"."
+            | che obs dio cane ^"!" \\ me ne vado ^"."
             | preferisco farmi bannare da facebook ^"," grazie ^"."
             | zio sei rimasto agli anni 80 "," vatti a comprare le timberland ^"."
             )
 ;
 
-Sim ::= ( "&#9776" | "&#977" | "&#9778" | "&#9779" | "&#9780" | "&#9781" | "&#9782" | "&#9783" )
+Sim ::= ( "&#9776" | "&#9777" | "&#9778" | "&#9779" | "&#9780" | "&#9781" | "&#9782" | "&#9783" )
 ;
 
 `
