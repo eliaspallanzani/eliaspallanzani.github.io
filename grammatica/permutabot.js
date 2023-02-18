@@ -75,11 +75,11 @@ Numero ::= ( 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 0
 ;
 
 Domanda ::= (\\sei soddifatto di te o vuoi ritirare "?"
-            | davvero appropriato "!" che aspetti ad avventurarti "?"
-            | beh "," non proprio il massimo "," ma ci accontenteremo
-            | dovevano riformarti "," ma comunque "..."
-            | non fanno piu' gli eroi di una volta
-            | che imponenza "!" e adesso vai "!"
+            | \\davvero appropriato "!" che aspetti ad avventurarti "?"
+            | \\beh^"," non proprio il massimo ^"," ma ci accontenteremo
+            | \\dovevano riformarti ^"," ma comunque "..."
+            | \\non fanno piu' gli eroi di una volta
+            | \\che imponenza ^"!" e adesso vai ^"!"
             )
 ;
 
@@ -92,7 +92,7 @@ Opzione2 ::= Pzione2
 Opzione3 ::= Pzione3
 ;
 
-Pzione1 ::= (ma che schifo ^"!" voglio "<a href=https: &#47 &#47 &quot www.w3schools.com &quot &#47>" ritirare "</a>"
+Pzione1 ::= (ma che schifo ^"!" voglio "<a href=https:" "&#47" "&#47" "&quot" www.w3schools.com "&quot" "&#47" ">" ritirare "</a>"
             | preferivo un nano mezzo pitbull ^"," riprova
             | questo allineamento e' contro la mia religione ^"," cambiamo
             | non sono mai stato cosi' offeso ^"," rifammi "!"
