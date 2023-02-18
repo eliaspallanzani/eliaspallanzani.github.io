@@ -9,8 +9,7 @@ I ::=   "title:    genera\\n"
       ^ "created:  21/04/2018"
 ;
 
-S ::= \\ 
-       Titolo  "<br>"
+S ::= \\ Titolo  "<br>"
       Intro  "<br>" "<br>"
       Nome "-" Razza "," Classe "," Allineamento Allineamento "</br>"
       le tue caratteristiche sono ":"  "</br>"
@@ -66,7 +65,7 @@ Caratt ::= forza | destrezza | costituzione  | carisma | digeribilita' | ingombr
               |  mana | sanita' mentale | alito puro | intelligenza
 ;
 
-Colore ::= AV ( red | brown | green | violet | orange ) CV
+Colore ::= ( red | brown | green | violet | orange )
 ;
 
 Pagina ::= Numero^Numero^Numero^Numero^Numero
