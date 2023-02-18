@@ -57,21 +57,21 @@ Razza ::= [semi^] ( [mezz'^] >(elfo | uomo | halfling |--- helder)
                   )
 ;
 
-Allineamento ::= buono | ottimo | malvagio | legale | neutrale | pessimo
+Allineamento ::= ( buono | ottimo | malvagio | legale | neutrale | pessimo
               |  illegale | bello | cattivo | bravo
+              )
 ;
 
-Caratt ::= forza | destrezza | costituzione  | carisma | digeribilita' | ingombro
+Caratt ::= ( forza | destrezza | costituzione  | carisma | digeribilita' | ingombro
               |  mana | sanita' mentale | alito puro | intelligenza
-;
-
-Colore ::= ( red | brown | green | violet | orange )
+              )
 ;
 
 Pagina ::= Numero^Numero^Numero^Numero^Numero
 ;
 
-Numero ::= 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 0
+Numero ::= ( 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 0
+           )
 ;
 
 Domanda ::= (sei soddifatto di te o vuoi ritirare "?"
@@ -101,7 +101,7 @@ Pzione1 ::= (ma che schifo "!" voglio ritirare
             )
 ;
 
-Pzione2      ::= (la mia vanita' e' sottisfatta "," andiamo avanti
+Pzione2 ::= (la mia vanita' e' sottisfatta "," andiamo avanti
             | non vedo l'ora di pugnare "!"  portami immantinenti al dongione
             | ti daro' corda per altri due minuti "," vediamo un po'
             | yawn "," non mi annoiavo tanto dalle superiori "," proseguiamo
@@ -110,7 +110,7 @@ Pzione2      ::= (la mia vanita' e' sottisfatta "," andiamo avanti
             )
 ;
 
-Pzione3      ::= (mi hai perso al secondo rigo "," ciao
+Pzione3 ::= (mi hai perso al secondo rigo "," ciao
             | la mia soglia di attenzione e' 5 secondi "," addio
             | che obs dio cane "!" me ne vado
             | preferisco farmi bannare da facebook "," grazie
