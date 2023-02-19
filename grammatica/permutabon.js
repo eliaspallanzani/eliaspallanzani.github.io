@@ -326,7 +326,7 @@ COGNOMI ::= \\ ( angstr ^"&ograve" ^m
 		| h ^"&ugrave" ^ssein
 		| van helsing
 		| r ^"&ograve" ^stropov
-		| ant ^"&ograve" ^nov" 
+		| ant ^"&ograve" ^nov 
 		| amundsen
 		| bergsson
 		| levy ^"-" ^strauss
