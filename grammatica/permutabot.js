@@ -17,7 +17,7 @@ S ::= "<b>" Titolo "</b> <br>"
        Caratt Numero ^Numero  "<br>"
        Caratt Numero "<br> <br>"
      \\ Domanda  "<br> <br>" 
-        Sim Sim Sim Sim "<br> <br>"
+        Stacco "<br> <br>"
        "<i>" Opzioni "</i> <br>"
 ;
 
@@ -130,7 +130,13 @@ Pzione3 ::= (mi hai perso al secondo rigo ^"," "<a href=https://www.twitter.com>
             )
 ;
 
+Stacco ::= ( Sim | Dadi )+
+;
+
 Sim ::= ( "&#9776" | "&#9777" | "&#9778" | "&#9779" | "&#9780" | "&#9781" | "&#9782" | "&#9783" )
+;
+
+Dadi ::= ( "&#9856" | "&#9857" | "&#9858" | "&#9859" | "&#9860" | "&#9611" )
 ;
 
 `
