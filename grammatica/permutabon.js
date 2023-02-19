@@ -377,7 +377,7 @@ TOPONOMASTICAITALIANA ::= ( di \\ torrepaduli
 TOPONOMASTICASTRANIERA ::= \\ ( von hohenstaufen
 				| von \\ bismarck
 				| d'^ \\h ^"&agrave" ^uteville
-                       		| de la \\serna" 
+                       		| de la \\serna 
 				| \\ auf \\ wiedehersen
 				| von \\ thyssen ^"-" ^B ^"&agrave" ^rnemisza
 				| \\ hyerosolimitani
