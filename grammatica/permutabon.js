@@ -4,7 +4,7 @@ I ::=   "title:    incarico\\n"
       ^ "language: italian\\n"
       ^ "status:   esperimento\\n"
       ^ "topic:    misc\\n"
-      ^ "audience: tutti\\n"
+      ^ "audience: la bella gente\\n"
       ^ "comment: include la grammatica nobilta' di fjf\\n"
       ^ "created:  24/04/2018"
 ;
@@ -64,7 +64,7 @@ Eventi3 ::= Alvise tent ^"&ograve" (il tutto per tutto | una mossa disperata) la
       \\ voci bene informate dicono che Alvise si ( nasconde | trova | pu^"&ograve" trovare | cela | "&egrave" diretto ) 
       nel Profondo e l ^"&igrave" bisogna (andare | avventurarsi) ^".";
 
-NS ::= (nord | sud)
+NS ::= (nord | sud | nordovest )
 ;
 
 EO ::= (est | ovest)
