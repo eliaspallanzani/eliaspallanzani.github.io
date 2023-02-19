@@ -5,7 +5,7 @@ I ::=   "title:    incarico\\n"
       ^ "status:   esperimento\\n"
       ^ "topic:    misc\\n"
       ^ "audience: tutti\\n"
-      ^ "comment: include la grammatica nobilta' di FJF\\n"
+      ^ "comment: include la grammatica nobilta' di fjf\\n"
       ^ "created:  24/04/2018"
 ;
 
@@ -126,14 +126,14 @@ Domanda ::= allora ( non vedi l'ora di | (sei (pronto a | impaziente di)))
 Opzioni ::= { \\ Opzione1 "<br> <br>" } { \\ Opzione2 "<br> <br>" } { \\ Opzione3 "<br> <br>" }
 ;
 
-Opzione1 ::= "<a href=https//:avanti.html>" Pzione1 ^"</a>"
+Opzione1 ::= "<a href=https//:avanti.html>" Pzione1 "</a>"
 ;
 Pzione1 ::= (cazzo chi aspettiamo ^"!"
             | oh io vado in sollucchero per queste stronzate ^"!"
             | purtroppo mi tocca ^"."
 	    )
 ;
-Opzione2 ::= "<a href=https://rifiuto.html>" Pzione2 ^"</a>"
+Opzione2 ::= "<a href=https://rifiuto.html>" Pzione2 "</a>"
 ;
 Pzione2 ::= (mmm ^"..." mica mi conviene ^"..." quasi quasi torno a casa ^"."
             | senza denari non si cantano messe ^"!" \\ fallo fare a qualche disagiato ^"."
@@ -141,7 +141,7 @@ Pzione2 ::= (mmm ^"..." mica mi conviene ^"..." quasi quasi torno a casa ^"."
 	    )
 ;
 
-Opzione3 ::= "<a href=https://pippo.html/">" Pzione3 ^"</a>"
+Opzione3 ::= "<a href=https://pippo.html/>" Pzione3 "</a>"
 ;
 Pzione3 ::= non ho capito niente ^"," ricomincia daccapo ^"!" 
 		| questa missione non mi (piace | garba ) ^"," dammene un'altra ^"." 
