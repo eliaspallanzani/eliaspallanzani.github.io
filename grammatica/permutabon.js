@@ -201,12 +201,12 @@ TITOLIUOMO ::= \\ 	( doge
 			| conte 
 			| ducaconte
 			| duca
-			| arci | Gran ) ^duca
+			| ( srci | gran ) ^duca
 			| princip ^( e | ino )
 			| marchese
 			| visconte
 			| imperatore
-			| ++nobil^(h|u)^omo 
+			| nobil^(h|u)^omo 
 			| delfino
 			| infante
 			)
@@ -275,7 +275,7 @@ NOMIUOMO ::= \\ ( helder
 		)
 ;
 
-COGNOMI ::= \\ ( Angstr ^"&ograve" ^m 
+COGNOMI ::= \\ ( angstr ^"&ograve" ^m 
 		| serbelloni
 		| mazzanti
 		| viendalmare	
