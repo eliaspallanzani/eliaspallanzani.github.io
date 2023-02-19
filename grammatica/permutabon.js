@@ -42,11 +42,11 @@ Premessa ::= Eventi Eventi2 Eventi3
 ;
 
 Eventi ::= ( il momento "&egrave" (tragico | difficile | catartico | solenne ) ^","
-       ma per cambiare il futuro bisogna (innanzitutto | prima | per prima cosa) conoscere il passato) ":" 
+       ma per cambiare il futuro bisogna (innanzitutto | prima | per prima cosa) conoscere il passato) ^":" 
 	"<br> <br>"
-       (un tempo | una volta | non e' molto che) (il nostro popolo | la nostra gente | la popolazione )
+       (un tempo | una volta | non "&egrave" molto che) (il nostro popolo | la nostra gente | la popolazione )
        (prosperava | gioiva | tripudiava) sotto il (lieve tallone | tenero giogo | dispotismo illuminato) di NOBILE ^","
-       finche' dal NS [NS] [EO] Qualita non giunse NOBILE ^","
+       finch ^"&egrave" dal NS [NS] [EO] Qualita non giunse NOBILE ^","
        con le sue armate di ( turisti | forestieri | mostri | persone non belle | spettri della luce) ^"."
 ;
 
@@ -57,11 +57,12 @@ Eventi2 ::= {(la battaglia | la pugna | il certame | la guerra )}
 
 Eventi3 ::= Alvise tent ^"&ograve" (il tutto per tutto | una mossa disperata) lanciando il suo 
 	{pi ^"&ugrave" AggettivoInc} {incantesimo} ^":" NomeIncantesimo ^"." "<br> <br>"
-       da quel momento non si "&egrave" capito pi ^"&ugrave" niente e siamo ridotti come vedi ^"."
+       \\ da quel momento non si "&egrave" capito pi ^"&ugrave" niente e siamo ridotti come vedi ^"."
 
-       per porre (fine | termine) a tutto ci ^"&ograve" ( bisogna | tocca | "&egrave" necessario ) (arrivare | risalire) alla (fonte | causa prima) ^"!"
+       \\ per porre (fine | termine) a tutto ci ^"&ograve" ( bisogna | tocca | "&egrave" necessario ) (arrivare | risalire) alla (fonte | causa prima) ^"!"
 
-       voci bene informate dicono che Alvise si nasconde nel Profondo e l ^"&igrave" bisogna andare;
+      \\ voci bene informate dicono che Alvise si ( nasconde | trova | pu^"&ograve" trovare | cela | "&egrave" diretto ) 
+      nel Profondo e l ^"&igrave" bisogna (andare | avventurarsi) ^".";
 
 NS ::= (nord | sud)
 ;
@@ -74,7 +75,7 @@ Qualita ::= (assolato | nebbioso | torrido | nevoso | tempestoso | temperato ma 
 ;
 
 
-Missione ::= la tua [sacra] missione quindi "&grave" (trovare
+Missione ::= la tua [sacra] missione quindi "&egrave" (trovare
                                        | uccidere
                                        | sedurre
                                        | imprigionare
@@ -88,13 +89,13 @@ Missione ::= la tua [sacra] missione quindi "&grave" (trovare
 					| salvare
 					| avere un rapporto more uxorio con
 					)
-                                       Alvise
+                                       Alvise ^"."
 ;
 
-Alvise := il (mago
+Alvise := (il >(mago
            | fattucchiere
-           | stregone
-           | pranoterapeuta )
+           | saggio
+           | pranoterapeuta ) lo >( stregone | maleditto))
              \\ alvise 
 ;
 
@@ -115,7 +116,7 @@ NomeIncantesimo ::= (il sigillo | il turbine | l'uragano) (del caos | della scom
 Profondo ::= ( \\ profondo | \\ dongione | \\ mundus \\ subterraneus )
 ;
 
-Domanda ::= allora ( non vedi l'ora di | (sei (pronto a | impaziente di)))
+Domanda ::= ( ebbene | dunque | allora) ^"," ( non vedi l'ora di | (sei (pronto a | impaziente di)))
             ( intraprendere | cominciare | principiare | dare inizio a)
             (questa missione | quest'ordalia | questa \\ quest | il compito assegnato) ^"?" 
 ;
@@ -126,14 +127,14 @@ Domanda ::= allora ( non vedi l'ora di | (sei (pronto a | impaziente di)))
 Opzioni ::= { \\ Opzione1 "<br> <br>" } { \\ Opzione2 "<br> <br>" } { \\ Opzione3 "<br> <br>" }
 ;
 
-Opzione1 ::= "<a href=https//:avanti.html>" Pzione1 "</a>"
+Opzione1 ::= "<a href=avanti.html>" Pzione1 "</a>"
 ;
 Pzione1 ::= (cazzo chi aspettiamo ^"!"
             | oh io vado in sollucchero per queste stronzate ^"!"
             | purtroppo mi tocca ^"."
 	    )
 ;
-Opzione2 ::= "<a href=https://rifiuto.html>" Pzione2 "</a>"
+Opzione2 ::= "<a href=rifiuto.html>" Pzione2 "</a>"
 ;
 Pzione2 ::= (mmm ^"..." mica mi conviene ^"..." quasi quasi torno a casa ^"."
             | senza denari non si cantano messe ^"!" \\ fallo fare a qualche disagiato ^"."
@@ -141,7 +142,7 @@ Pzione2 ::= (mmm ^"..." mica mi conviene ^"..." quasi quasi torno a casa ^"."
 	    )
 ;
 
-Opzione3 ::= "<a href=https://pippo.html/>" Pzione3 "</a>"
+Opzione3 ::= "<a href=pippo.html>" Pzione3 "</a>"
 ;
 Pzione3 ::= non ho capito niente ^"," ricomincia daccapo ^"!" 
 		| questa missione non mi (piace | garba ) ^"," dammene un'altra ^"." 
@@ -387,9 +388,9 @@ TOPONOMASTICASTRANIERA ::= \\ ( von hohenstaufen
 
 TOPONOMASTICA ::= ( TOPONOMASTICAITALIANA 
 		| TOPONOMASTICASTRANIERA 
-		| et de ^SUFFISSIESTERI 
-		| di tutte le ^SUFFISSIITALIANIF 
-		| di tutti gli ^SUFFISSIITALIANIM 
+		| et de SUFFISSIESTERI 
+		| di tutte le SUFFISSIITALIANIF 
+		| di tutti gli SUFFISSIITALIANIM 
 		) 
 ;
 
