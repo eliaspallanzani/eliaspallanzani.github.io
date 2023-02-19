@@ -271,7 +271,7 @@ NOMIUOMO ::= \\ ( helder
 		| vladimir
 		| anton
 		| misha
-		| s ^"&#2521 ^ leyman
+		| souleyman
 		)
 ;
 
