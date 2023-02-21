@@ -33,7 +33,7 @@ Saluto ::= (la peste a te
 | allora addio 
 | che devo sentire ^"!" 
 | mi deludi ) ^”;” 
-esclama il buon "Tristano" ^”,”
+esclama il buon "Tristano" ^","
 ;
 
 Aggettivo ::= Fav: (coraggioso | impavido | scaltro | astuto)
@@ -42,15 +42,15 @@ Epiteto ::= Fav: (eroe | avventuriero | cercatore di conoscenza)
 | Sfav: (predone | violatore di tombe | spione );
 
 Profezia ::= avevo il sospetto che fossi 
-(una truffa | un bidone | un uomo dappoco) ^“,”
-ma te ne pentirai ^”!” 
-\\ l'incantesimo d ^ Alvise “&egrave” fuori controllo e
+(una truffa | un bidone | un uomo dappoco) ^","
+ma te ne pentirai ^"," 
+l'incantesimo d ^ Alvise “&egrave” fuori controllo e
 diventer ^”&agrave” sempre pi ^”&ugrave” incontrollabile 
 finch ^”&egrave” (tutto il mondo | tutta "Rarte")
-piomber ^”&agrave” nel caos ^”!”
+piomber ^”&agrave” nel caos ^"."
 ;
 
-Scherno ::= \\ ma tu te ne infotti ^”," 
+Scherno ::= \\ ma tu te ne infotti ^","
 lasci il vecchio a (blaterare|sbavare) 
 le sue (profezie|maledizioni)
 e ti avvii (verso casa | alla taverna | al lupanare )
@@ -62,8 +62,9 @@ Risposta ::= lungo la strada incontri
 ((ArtInd.M Tizio.M) | (ArtInd.F Tizio.F)) 
 dall'aria (spaventata | allarmata | oltraggiata | terrorizzata | incerta)
 e allora chiedi che (diavolo | cazzo | madonna) 
-sta succedendo di nuovo ^”.” \\n
-\\ la risposta suona pi ^”&ugrave” o meno ^”:” \\n
+sta succedendo di nuovo ^"." \\n
+\\ la risposta suona pi ^”&ugrave” o meno ^","
+ \\n
 ;
 
 ArtInd ::= (M: un | F: una);
@@ -72,16 +73,16 @@ Tizio ::= M: (contadino | bell'uomo | saltimbanco | perdigiorno | armigero )
 | F: (pastorella | donna | vecchia) (scarmigliata | dall'occhio febbricitante) 
 ;
 
-ScambioParole ::=  {(signor mio | egregio signore | maledetto impiastro)} ^”,” {[ma]}
-{(non vedi | non ti accorgi | non capisci)} che {tutto} {si sta mischiando} ^”?”  \\n
+ScambioParole ::=  {(signor mio | egregio signore | maledetto impiastro)} ^"," {[ma]}
+{(non vedi | non ti accorgi | non capisci)} che {tutto} {si sta mischiando} ^"?"  \\n
 ;
 
-ParlaScambiato ::= (follia | cimurro | da quando hanno chiuso i manicomi) ^”...” ”,”
-pensi ^”,” e rispondi per le rime ^”,”
+ParlaScambiato ::= (follia | cimurro | da quando hanno chiuso i manicomi) ^"..." ^","
+pensi ^"," e rispondi per le rime ^","
 ma con (orrore | raccapriccio | incredulit ^”&agrave” | enorme sorpresa) 
 senti la tua bocca
 (pronunciare | dire) 
-queste parole ^”:” \\n
+queste parole ^":" \\n
 
 ' {calmati} {non} {dire} {(sciocchezze | scemenze | assurdit ^"&agrave")} ^","
 {cosa} {pensi} di {farmi} paura ^”?” '
