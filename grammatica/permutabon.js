@@ -11,7 +11,7 @@ I ::=   "title:    incarico\\n"
 
 S ::= "<b>" Titolo "</b> <br>"
     \\ Presentazione "<br> <br>"
-      Premessa "<br> <br>"
+    \\ Premessa "<br> <br>"
       \\ Missione "<br>"
       \\ Domanda  "<br> <br>" 
         Stacco "<br> <br>"
@@ -44,7 +44,7 @@ Premessa ::= Eventi Eventi2 Eventi3
 Eventi ::= ( il momento "&egrave" (tragico | difficile | catartico | solenne ) ^","
        ma per cambiare il futuro bisogna (innanzitutto | prima | per prima cosa) conoscere il passato) ^":" 
 	"<br> <br>"
-       (un tempo | una volta | non "&egrave" molto che) (il nostro popolo | la nostra gente | la popolazione )
+      \\ (un tempo | una volta | non "&egrave" molto che) (il nostro popolo | la nostra gente | la popolazione )
        (prosperava | gioiva | tripudiava) sotto il (lieve tallone | tenero giogo | dispotismo illuminato) di NOBILE ^","
        finch ^"&egrave" dal NS [NS] [EO] Qualita non giunse NOBILE ^","
        con le sue armate di ( turisti | forestieri | mostri | persone non belle | spettri della luce) ^"."
@@ -95,7 +95,8 @@ Missione ::= la tua [sacra] missione quindi "&egrave" (trovare
 Alvise := (il >(mago
            | fattucchiere
            | saggio
-           | pranoterapeuta ) lo >( stregone | maleditto))
+           | pranoterapeuta ) 
+           | lo >( stregone | maleditto))
              \\ alvise 
 ;
 
@@ -168,8 +169,8 @@ SCHIATTA ::= \\ ( FEMMINILE1 | MASCHILE1 | FEMMINILE2 | MASCHILE2 )
 FEMMINILE1 ::= \\ ( [TITOLIDONNA] NOMIDONNA (COGNOMI | ++(COGNOMI COGNOMI))
            [TOPONOMASTICA]( _ | -(^"," detta "<i>"^(SOPRANNOMEDONNA)^"</i>"))) ;
 
-FEMMINILE2 ::= \\ ( [ donna | zarina | --prof"^"ssa | - avv^ "." ssa | - dott^"."ssa
-           | ---casalinga ] NOMIDONNA (COGNOMI | ++(COGNOMI COGNOMI)) [^"," ^TITOLIDONNA TOPONOMASTICA]) 
+FEMMINILE2 ::= \\ ( [ donna | zarina | -prof"^"ssa | - avv^ "." ssa | - dott^"."ssa
+           | -casalinga ] NOMIDONNA (COGNOMI | ++(COGNOMI COGNOMI)) [^"," ^TITOLIDONNA TOPONOMASTICA]) 
 ;
 
 MASCHILE1 ::= \\ ( [TITOLIUOMO] NOMIUOMO (COGNOMI | +(COGNOMI COGNOMI)) [TOPONOMASTICA]
