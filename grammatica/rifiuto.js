@@ -151,13 +151,13 @@ ora (sei (pronto a | impaziente di))
 ;
 
 
-Opzione1 ::= "<a href=.rifiuto.html">" Pzione1 ^"</a>"
+Opzione1 ::= "<a href=rifiuto.html>" Pzione1 ^"</a>"
 ;
 Pzione1 ::= (s ^"&iacute" ^"," adesso "IO CREDO!" 
 | guarda ^"," proprio perch ^"&egrave" vedo che ti sei sforzato
 | temo che se rifiutassi potresti commettere una sciocchezza)
 ;
-Opzione2 ::= "<a href=.rifiuto.html>" Pzione2 ^"</a>"
+Opzione2 ::= "<a href=rifiuto.html>" Pzione2 ^"</a>"
 ;
 Pzione2 ::= (apprezzo il tentativo ma no ^"," ho di meglio da fare
 | se c'era qualche minima speranza che continuassi questa indegna pantomima l'ha distrutta
