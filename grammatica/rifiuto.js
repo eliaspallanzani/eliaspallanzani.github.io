@@ -25,13 +25,13 @@ Titolo ::= ( teh \\ infinite \\ quest
 ;
 
 Reprimenda ::= {Saluto} {Aggettivo.Fav Epiteto.Fav 
-| Aggettivo.Sfav Epiteto.Sfav} ^”!” 
+| Aggettivo.Sfav Epiteto.Sfav} ^"!" 
 ;
 
 Saluto ::= (la peste a te 
-| allora fanculo ^“!” 
+| allora fanculo ^"!" 
 | allora addio 
-| che devo sentire ^”!” 
+| che devo sentire ^"!" 
 | mi deludi ) ^”;” 
 esclama il buon "Tristano" ^”,”
 ;
