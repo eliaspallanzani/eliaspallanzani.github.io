@@ -29,11 +29,11 @@ Reprimenda ::= {Saluto} {Aggettivo.Fav Epiteto.Fav
 ;
 
 Saluto ::= (la peste a te 
-| allora fanculo ^"!" 
-| allora addio 
-| che devo sentire ^"!" 
-| mi deludi ) ^”;” 
-esclama il buon "Tristano" ^","
+           | allora fanculo ^"!" 
+           | allora addio 
+           | che devo sentire ^"!" 
+           | mi deludi ) ^";" 
+           esclama il buon "Tristano" ^","
 ;
 
 Aggettivo ::= Fav: (coraggioso | impavido | scaltro | astuto)
