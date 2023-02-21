@@ -1,19 +1,19 @@
 const grammar = `
 
 
-S ::= \\ Titolo \\n
-Reprimenda \\n
-Profezia \\n
-Scherno \\n
-Risposta \\n
-ScambioParole \\n
-ParlaScambiato \\n
-ScambioLettere \\n
-ScambioTotale \\n
-Sconforto \\n
- Domanda \\n
-Opzione1 \\n
-Opzione2 \\n
+S ::= \\ Titolo "<br><br>"
+Reprimenda "<br><br>"
+Profezia "<br><br>"
+Scherno "<br><br>"
+Risposta "<br><br>"
+ScambioParole "<br><br>"
+ParlaScambiato "<br><br>"
+ScambioLettere "<br><br>"
+ScambioTotale "<br><br>"
+Sconforto "<br><br>"
+ Domanda "<br><br>"
+Opzione1 "<br><br>"
+Opzione2 "<br><br>"
 Opzione3
 ;
 
@@ -62,9 +62,9 @@ Risposta ::= lungo la strada incontri
 ((ArtInd.M Tizio.M) | (ArtInd.F Tizio.F)) 
 dall'aria (spaventata | allarmata | oltraggiata | terrorizzata | incerta)
 e allora chiedi che (diavolo | cazzo | madonna) 
-sta succedendo di nuovo ^"." \\n
+sta succedendo di nuovo ^"." "<br><br>"
 \\ la risposta suona pi ^"&ugrave" o meno ^","
-\\n
+"<br><br>"
 ;
 
 ArtInd ::= (M: un | F: una);
@@ -74,7 +74,7 @@ Tizio ::= M: (contadino | bell'uomo | saltimbanco | perdigiorno | armigero )
 ;
 
 ScambioParole ::=  {(signor mio | egregio signore | maledetto impiastro)} ^"," {[ma]}
-{(non vedi | non ti accorgi | non capisci)} che {tutto} {si sta mischiando} ^"?"  \\n
+{(non vedi | non ti accorgi | non capisci)} che {tutto} {si sta mischiando} ^"?"  "<br><br>"
 ;
 
 ParlaScambiato ::= (follia | cimurro | da quando hanno chiuso i manicomi) ^"..." ^","
@@ -82,13 +82,14 @@ pensi ^"," e rispondi per le rime ^","
 ma con (orrore | raccapriccio | incredulit ^"&agrave" | enorme sorpresa) 
 senti la tua bocca
 (pronunciare | dire) 
-queste parole ^":" \\n
+queste parole ^":" "<br><br>"
 
 ' {calmati} {non} {dire} {(sciocchezze | scemenze | assurdit ^"&agrave")} ^","
 {cosa} {pensi} di {farmi} paura ^"?" '
 ;
 
-ScambioLettere ::= ' ma che succede ' "," ti dici ^"," e preso da una strana ansia ti affretti verso il
+ScambioLettere ::= ' ma che succede ' "," ti dici ^"," e preso 
+da una strana ansia ti affretti verso il
 paese pi ^"&ugrave" vicino ^"." 
 \\ intanto comincia a calare la notte e alzando lo sguardo non riconosci
 le costellazioni ^"." 
@@ -96,9 +97,9 @@ le costellazioni ^"."
 ti dici "," ma forse ricordi male ^"." 
 \\ nel frattempo sei arrivato al paese e gi ^"&agrave" 
 scorgi l'insegna della taverna ^"," che per ^"&ograve"
-adesso dice ^":" \\n
+adesso dice ^":" "<br><br>"
 
-' "T"^Taverna^"A" ' ^"." \\n
+' "T"^Taverna^"A" ' ^"." "<br><br>"
 ;
 
 Segno ::= M: (il \\ toro | il \\ capricorno | lo \\ scorpione | \\ auriga | il (piccolo | grande) \\ carro | \\ ofiuco )
@@ -110,14 +111,14 @@ Taverna ::= \\{ a }^{ v }^{ e }^{ r }^{ n }
 ;
 
 ScambioTotale ::= colto da un dubbio orrendo entri e ti rivolgi 
-(al primo Tizio.M | alla prima Tizio.F) che vedi ^":" \\n
+(al primo Tizio.M | alla prima Tizio.F) che vedi ^":" "<br><br>"
  
 ' presto dimmi qualcosa ^"!" ' ^"," gridi ^"," 
-' qualcosa di sensato ^"!" ' \\n
+' qualcosa di sensato ^"!" ' "<br><br>"
 
-' ParoleFuse ' "," risponde ^"," e aggiunge \\n
+' ParoleFuse ' "," risponde ^"," e aggiunge "<br><br>"
 
-' ParoleFuse ' ^"." \\n
+' ParoleFuse ' ^"." "<br><br>"
 ;
 
 ParoleFuse ::= Lettere^Lettere^[Lettere] | ParoleFuse [^ParoleFuse]
