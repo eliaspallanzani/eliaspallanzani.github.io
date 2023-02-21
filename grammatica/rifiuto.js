@@ -36,26 +36,57 @@ Saluto ::= (la peste a te
            esclama il buon "Tristano" ^","
 ;
 
-Aggettivo ::= Fav: (coraggioso | impavido | scaltro | astuto)
-| Sfav: (diabolico | avido | schizofrenico | crudele);
-Epiteto ::= Fav: (eroe | avventuriero | cercatore di conoscenza)
-| Sfav: (predone | violatore di tombe | spione );
+Aggettivo ::= Fav: (coraggioso 
+                   | impavido 
+                   | scaltro 
+                   | astuto
+                   )
+            | Sfav: (diabolico 
+                    | avido 
+                    | schizofrenico 
+                    | crudele
+                    )
+;
+
+Epiteto ::= Fav: (eroe 
+                 | avventuriero 
+                 | cercatore di conoscenza)
+          | Sfav: (predone 
+                  | violatore di tombe 
+                  | spione 
+                  )
+;
+
 
 Profezia ::= avevo il sospetto che fossi 
-(una truffa | un bidone | un uomo dappoco) ^","
-ma te ne pentirai ^"," 
+            (una truffa 
+            | un bidone 
+            | un uomo dappoco
+            ) 
+^"," ma te ne pentirai ^"," 
 l'incantesimo d ^ Alvise "&egrave" fuori controllo e
 diventer ^"&agrave" sempre pi ^"&ugrave" incontrollabile 
-finch ^"&egrave" (tutto il mondo | tutta "Rarte")
+finch ^"&egrave" 
+            (tutto il mondo 
+            | tutta "Rarte"
+            )
 piomber ^"&agrave" nel caos ^"."
 ;
 
 Scherno ::= \\ ma tu te ne infotti ^","
-lasci il vecchio a (blaterare|sbavare) 
-le sue (profezie|maledizioni)
-e ti avvii (verso casa | alla taverna | al lupanare )
-in cerca di pi ^"&ugrave" (facili | redditizie | sensate) 
-avventure
+lasci il vecchio a (blaterare
+                   |sbavare
+                   ) 
+le sue (profezie
+       |maledizioni
+       )
+e ti avvii (verso casa 
+           | alla taverna 
+           | al lupanare )
+in cerca di {pi ^"&ugrave" (facili 
+                          | redditizie 
+                          | sensate)}
+{avventure}
 ;
 
 Risposta ::= lungo la strada incontri 
