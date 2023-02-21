@@ -124,7 +124,7 @@ ParoleFuse ::= Lettere^Lettere^[Lettere] | ParoleFuse [^ParoleFuse]
 ;
 
 Lettere ::= (++a| bf | ch | dy | ++e | fk | gw | hx | +i | ll | mq | nt | ++o | ps | --q
-| rl | sz | tm | u | v | -z | "'" | "," | "!" | "..." | ) 
+| rl | sz | tm | u | v | -z | "'" | "," | "!" | "..." ) 
 ;
 
 Sconforto ::= allora mentre intorno a te i mobili 
