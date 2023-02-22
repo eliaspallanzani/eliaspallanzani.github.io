@@ -18,7 +18,7 @@ Riga "<br>"
 Riga ::= Car Car Car Car Car Car Car Car
 ;
 
-Car :;= ( "&#176" 
+Car ::= ( "&#176" 
         | "&#177"
         | "&#178"
         | "&#219"
