@@ -1,6 +1,5 @@
 const grammar = `
 
-
 S ::= \\ Titolo "<br><br>"
 Reprimenda "<br><br>"
 Profezia "<br><br>"
@@ -12,16 +11,16 @@ ScambioLettere "<br><br>"
 ScambioTotale "<br><br>"
 Sconforto "<br><br>"
  Domanda "<br><br>"
-Opzione1 "<br><br>"
-Opzione2 "<br><br>"
-Opzione3
+"<i>{Opzione1 "<br><br>"}
+{Opzione2 "<br><br>"}
+{Opzione3} "<br><br>" "</i>
 ;
 
 Titolo ::= ( teh \\ infinite \\ quest
-| loopo \\ solitario 
-| the \\ endless \\ ebook
-| ebook of \\ sand
-)
+           | loopo \\ solitario 
+           | the \\ endless \\ ebook
+           | ebook of \\ sand
+           )
 ;
 
 Reprimenda ::= {Saluto} {Aggettivo.Fav Epiteto.Fav 
@@ -32,8 +31,9 @@ Saluto ::= (la peste a te
            | allora fanculo ^"!" 
            | allora addio 
            | che devo sentire ^"!" 
-           | mi deludi ) ^";" 
-           esclama il buon "Tristano" ^","
+           | mi deludi 
+           ) ^";" 
+           esclama il buon \\ tristano ^","
 ;
 
 Aggettivo ::= Fav: (coraggioso 
@@ -68,7 +68,7 @@ l'incantesimo d ^ Alvise "&egrave" fuori controllo e
 diventer ^"&agrave" sempre pi ^"&ugrave" incontrollabile 
 finch ^"&egrave" 
             (tutto il mondo 
-            | tutta "Rarte"
+            | tutta \\ rarte
             )
 piomber ^"&agrave" nel caos ^"."
 ;
@@ -90,9 +90,16 @@ in cerca di {pi ^"&ugrave" (facili
 ;
 
 Risposta ::= lungo la strada incontri 
-((ArtInd.M Tizio.M) | (ArtInd.F Tizio.F)) 
-dall'aria (spaventata | allarmata | oltraggiata | terrorizzata | incerta)
-e allora chiedi che (diavolo | cazzo | madonna) 
+       ((ArtInd.M Tizio.M) 
+       | (ArtInd.F Tizio.F)) 
+dall'aria (spaventata 
+          | allarmata 
+          | oltraggiata 
+          | terrorizzata 
+          | incerta)
+e allora chiedi che (diavolo 
+                    | cazzo 
+                    | madonna) 
 sta succedendo di nuovo ^"." "<br><br>"
 \\ la risposta suona pi ^"&ugrave" o meno ^","
 "<br><br>"
@@ -100,56 +107,119 @@ sta succedendo di nuovo ^"." "<br><br>"
 
 ArtInd ::= (M: un | F: una);
 
-Tizio ::= M: (contadino | bell'uomo | saltimbanco | perdigiorno | armigero )
-| F: (pastorella | donna | vecchia) (scarmigliata | dall'occhio febbricitante) 
+Tizio ::= M: (contadino 
+             | bell'uomo 
+             | saltimbanco 
+             | perdigiorno 
+             | armigero 
+             )
+        | F: (pastorella 
+             | donna 
+             | vecchia (scarmigliata 
+                       | dall'occhio febbricitante
+                       )
+             )
 ;
 
-ScambioParole ::=  {(signor mio | egregio signore | maledetto impiastro)} ^"," {[ma]}
-{(non vedi | non ti accorgi | non capisci)} che {tutto} {si sta mischiando} ^"?"  "<br><br>"
+ScambioParole ::=  {(signor mio 
+                    | egregio signore 
+                    | maledetto impiastro
+                    )} 
+         ^"," {[ma]}
+              {(
+               non vedi 
+               | non ti accorgi 
+               | non capisci
+               )} 
+        che 
+               {tutto} 
+               {si sta mischiando} 
+        ^"?"  "<br><br>"
 ;
 
-ParlaScambiato ::= (follia | cimurro | da quando hanno chiuso i manicomi) ^"..." ^","
-pensi ^"," e rispondi per le rime ^","
-ma con (orrore | raccapriccio | incredulit ^"&agrave" | enorme sorpresa) 
-senti la tua bocca
-(pronunciare | dire) 
+ParlaScambiato ::= (follia 
+                   | cimurro 
+                   | da quando hanno chiuso i manicomi
+                   ) 
+^"..." ^"," pensi ^"," e rispondi per le rime ^","
+ma con (orrore 
+       | raccapriccio 
+       | incredulit ^"&agrave" 
+       | enorme sorpresa
+       ) 
+senti la tua bocca (pronunciare 
+                   | dire
+                   ) 
 queste parole ^":" "<br><br>"
 
-' {calmati} {non} {dire} {(sciocchezze | scemenze | assurdit ^"&agrave")} ^","
-{cosa} {pensi} di {farmi} paura ^"?" '
+"<i>" {calmati} {non} {dire} {(sciocchezze | scemenze | assurdit ^"&agrave")} ^","
+{cosa} {pensi} di {farmi} paura ^"?" "</i>"
 ;
 
-ScambioLettere ::= ' ma che succede ' "," ti dici ^"," e preso 
+ScambioLettere ::= "<i>" ma che succede "</i>" "," ti dici ^"," e preso 
 da una strana ansia ti affretti verso il
 paese pi ^"&ugrave" vicino ^"." 
 \\ intanto comincia a calare la notte e alzando lo sguardo non riconosci
 le costellazioni ^"." 
-' (Segno.M Dovrebbe.M | Segno.F Dovrebbe.F) ' "," 
+"<i>" (Segno.M Dovrebbe.M | Segno.F Dovrebbe.F) "</i>" "," 
 ti dici "," ma forse ricordi male ^"." 
 \\ nel frattempo sei arrivato al paese e gi ^"&agrave" 
 scorgi l'insegna della taverna ^"," che per ^"&ograve"
 adesso dice ^":" "<br><br>"
 
-' "T"^Taverna^"A" ' ^"." "<br><br>"
+ "T"^Taverna^"A"  ^"." "<br><br>"
 ;
 
-Segno ::= M: (il \\ toro | il \\ capricorno | lo \\ scorpione | \\ auriga | il (piccolo | grande) \\ carro | \\ ofiuco )
-| F: ( la \\ vergine | \\ cassiopea | la \\ cintura di \\ ercole | la \\ scodella );
-Dovrebbe ::= M: dovrebbe (essere pi ^"&ugrave" (a destra | basso |lungo | largo) | avere (pi ^"&ugrave" | meno) stelle) |
-F: dovrebbe (essere pi ^"&ugrave" (a destra | bassa |lunga | larga) | avere (pi ^"&ugrave" | meno) stelle) ;
+Segno ::= M: (il \\ toro 
+             | il \\ capricorno 
+             | lo \\ scorpione 
+             | \\ auriga 
+             | il (piccolo | grande) \\ carro 
+             | \\ ofiuco 
+             )
+        | F: ( la \\ vergine 
+             | \\ cassiopea 
+             | la \\ cintura di \\ ercole 
+             | la \\ scodella 
+             )
 
-Taverna ::= \\{ a }^{ v }^{ e }^{ r }^{ n }
+;
+
+Dovrebbe ::= M: dovrebbe 
+               (essere pi ^"&ugrave" 
+                  (a destra 
+                  | basso 
+                  | lungo 
+                  | largo
+                  ) 
+               | avere (pi ^"&ugrave" 
+                     | meno
+                     ) stelle
+               ) 
+             | F: dovrebbe 
+                (essere pi ^"&ugrave" 
+                  (a destra 
+                  | bassa 
+                  | lunga 
+                  | larga
+                  ) 
+                | avere (pi ^"&ugrave" 
+                    | meno
+                    ) stelle
+                ) 
+;
+
+Taverna ::= { a }^{ v }^{ e }^{ r }^{ n }
 ;
 
 ScambioTotale ::= colto da un dubbio orrendo entri e ti rivolgi 
 (al primo Tizio.M | alla prima Tizio.F) che vedi ^":" "<br><br>"
  
-' presto dimmi qualcosa ^"!" ' ^"," gridi ^"," 
-' qualcosa di sensato ^"!" ' "<br><br>"
+"<i>" presto dimmi qualcosa ^"!" "</i>" ^"," gridi ^"," 
+"<i>" qualcosa di sensato ^"!" "</i>" "<br><br>"
 
-' ParoleFuse ' "," risponde ^"," e aggiunge "<br><br>"
-
-' ParoleFuse ' ^"." "<br><br>"
+"<i>" ParoleFuse "</i>" "," risponde ^"," e aggiunge 
+"<i>" ParoleFuse "</i>" ^"." "<br><br>"
 ;
 
 ParoleFuse ::= Lettere^Lettere^[Lettere] | ParoleFuse [^ParoleFuse]
@@ -163,23 +233,41 @@ Sconforto ::= allora mentre intorno a te i mobili
 e le sedie cominciano a tremare e a scambiarsi di 
 posto capisci che il vecchio diceva la verit^"&agrave" ^"!" 
 \\ il caos sta prendendo il sopravvento e ormai
-non ti resta che dire ' ParoleFuse ' ^"!" \\n
+non ti resta che dire ParoleFuse ^"!" \\n
 ;
 
 
 Alvise := el (mago
-| fattucchiere
-| ^lo stregone
-| pranoterapeuta )
-\\ alvise ;
+             | fattucchiere
+             | ^lo stregone
+             | pranoterapeuta 
+             )
+     \\ alvise 
+;
 
-Domanda ::= (allora | ebbene | orbene) ^"," che vuoi fare ^"?" 
+Domanda ::= (allora 
+            | ebbene 
+            | orbene
+            ) ^"," che vuoi fare ^"?" 
 \\ forse sei ancora in tempo per salvare il mondo ^"!" \\n
 
-\\ (ci hai ripensato | ti sei convinto | ti sei fatto persuaso) ^"?" \\n
-ora (sei (pronto a | impaziente di))
-(cominciare | principiare | dare inizio a)
-(questa missione | quest'ordalia | il compito assegnato) ^"?" 
+\\ (ci hai ripensato 
+   | ti sei convinto 
+   | ti sei fatto persuaso
+   ) ^"?" \\n
+ora (sei 
+         (pronto a 
+         | impaziente di
+         )
+    )
+    (cominciare 
+    | principiare 
+    | dare inizio a
+    )
+(questa missione 
+| quest'ordalia 
+| il compito assegnato
+) ^"?" 
 ;
 
 
@@ -187,17 +275,26 @@ Opzione1 ::= "<a href=rifiuto.html>" Pzione1 ^"</a>"
 ;
 Pzione1 ::= (s ^"&iacute" ^"," adesso "IO CREDO!" 
 | guarda ^"," proprio perch ^"&egrave" vedo che ti sei sforzato
-| temo che se rifiutassi potresti commettere una sciocchezza)
+| temo che se rifiutassi potresti commettere una sciocchezza
+)
 ;
+
 Opzione2 ::= "<a href=rifiuto.html>" Pzione2 ^"</a>"
 ;
+
 Pzione2 ::= (apprezzo il tentativo ma no ^"," ho di meglio da fare
 | se c'era qualche minima speranza che continuassi questa indegna pantomima l'ha distrutta
-| ParoleFuse ^"!" )
+| ParoleFuse ^"!" 
+)
 ;
+
 Opzione3 ::= "<a href=https://www.facebook.com>" Pzione3 ^"</a>"
 ;
-Pzione3 ::= basta diocane^"!" | ma vai a cagare^"!" | squallido nerd io me ne vado
+
+Pzione3 ::= ( basta diocane^"!" 
+| ma vai a cagare^"!" 
+| squallido nerd io me ne vado
+)
 ;
 
 
