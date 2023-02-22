@@ -11,9 +11,9 @@ ScambioLettere "<br><br>"
 ScambioTotale "<br><br>"
 Sconforto "<br><br>"
  Domanda "<br><br>"
-"<i>{Opzione1 "<br><br>"}
+"<i>" {Opzione1 "<br><br>"}
 {Opzione2 "<br><br>"}
-{Opzione3} "<br><br>" "</i>
+{Opzione3 "<br><br>" } "</i>
 ;
 
 Titolo ::= ( teh \\ infinite \\ quest
