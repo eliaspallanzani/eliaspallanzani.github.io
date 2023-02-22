@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+<title>mappa</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="./css/w3.css">
+<link rel="stylesheet" href="./css/font-awesome.min.css" rel="preload">
+<link rel="stylesheet" href="./css/css.css">
+
+<!-- Facebook -->
+<meta property="og:url"                content="https://eliaspallanzani.github.io/permutabot" />
+<meta property="og:type"               content="article" />
+<meta property="og:title"              content="PermutaBoh" />
+<meta property="og:description"        content="Permutatore di prova" />
+<meta property="og:image"              content="https://eliaspallanzani.github.io/permutabot/pics/permutabot_preview.jpg" />
+
+<!-- CARICA IL FILE GRAMMATICA -->
+<script src="./grammatica/mappa.js"></script>
+
+</head>
+
+
+
+<body onload="GeneraFrase()">
+
+
+  <div id="id1" class="w3-content">
+
+  <div id="id2" class="w3-container w3-content w3-center w3-padding-8" style="max-width:800px">
+
+
+  <div class="w3-container w3-center w3-black ">
+
+    <h3>La Mappa</h3>
+
+      </div>
+          <p id="myText" 
+             <!-- readonly="readonly" unselectable="on" -->
+          class="
+                <!-- noselect -->
+          w3-center w3-margin-top w3-padding-16 w3-xlarge"></p>
+      </div>
+  
+</div>
+
+
+
+<!-- FOOTER -->
+<footer class="w3-center w3-small w3-display-bottommiddle" style="white-space: nowrap">
+
+    <!-- BOTTONE refresh generatore 
+    <button style="margin-bottom: 10%; user-select: none;" class="btn w-mobile w3-round-xxlarge w3-padding-16 w-margin-bottom" onmouseup = "GeneraFrase()"><span style="white-space: nowrap">PermutaBoh&nbsp;&nbsp;<i class="fa fa-refresh"></i></span></button>
+    -->
+
+  <p style="color: gray;">
+    Creato da <a href="https://eliaspallanzanivive.wordpress.com/" target="_atpsd">FES</a>
+  </p>
+</footer>
+
+
+<script>
+  function GeneraFrase() {
+    let seed = ((new Date()).getTime()) % (2**32); /*randomizza le frasi in base al momento */
+    Polygen.pRngInit(seed); /* IMPORTANTE! */
+    polygen = Polygen.generate(grammar);
+    frase = polygen();
+    document.getElementById("myText").innerHTML = frase;
+  }
+</script>
+
+<script src="./js/polygen_min.js"></script>
+
+
+
+</body>
+
+</html>
