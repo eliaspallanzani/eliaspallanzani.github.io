@@ -226,13 +226,13 @@ AGGETTIVOO ::= dalla lama nera
 MOB ::= (S:_ | N:_) \\ignatius
         | (S:un | N:_)bardo
         | (S:un | N:_)mendicante
-        | (S:il | N:_)\varuna \nero
+        | (S:il | N:_)\\varuna \\nero
         | (S:un | N:_)imp
         | (S:un | N:_)bel cagnolino
         | (S:un | N:_)cavallo (COLORE.S)
         | (S:un | N:_)topo muschiato
-        | (S:_ | N:_)\valorm
-        | (S:_ | N:_)\\tolvaas
+        | (S:_ | N:_) \\valorm
+        | (S:_ | N:_) \\tolvaas
         | (S:l' | N:_)araldo
         | (S:un | N:_)gallo
         | (S:un | N:_)leone
@@ -243,7 +243,7 @@ MOB ::= (S:_ | N:_) \\ignatius
         | (S:un | N:_)capromorfo
         | (S:uno | N:_)pterodonte [COLORE.S] [AGG.M]
         | (S:un | N:_)tirannosauro nano
-        | (S:il | N:_)\varuna \COLORE.S
+        | (S:il | N:_)\\varuna \\COLORE.S
         | (S:un | N:_)nano [AGG.M]
         | (S:un | N:_)ranger
         | (S:un | N:_)cane [AGG.M]
