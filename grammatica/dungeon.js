@@ -1,3 +1,5 @@
+const grammar = `
+
 I ::= "title: dungeon\\n"
       ^"author: Spallanzani Elia\\n"
       ^"language: italian\\n"
@@ -333,22 +335,4 @@ Opzione3 ::= "<i><a href= >" Pzione3 ^"</a></i>"
 Pzione3 ::= basta diocane^"!" | ma vai a cagare^"!" | squallido nerd io me ne vado^"."
 ;
 
-
-
-AV := "\""^\ ;
-CV := ^"\"" ;
-DP := ^":" ;
-ESCL := ^ ("!" | -"!!!")  \ ;
-NL := ^"\n"^\ ;
-NL2 := ^"\n\n"^\ ;
-P ::= ^"."\ ;
-P3 := ^"..." ;
-Q ::= ^"?"\ ;
-Q3 := ^"???"\ ;
-SOSP ::= (^"...") + ;
-V := ^"," ;
-SL := ^"/" ;
-AA := ^"<" ;
-CA := ^">" ;
-UG := ^"=" ;
-(* no comment *)
+`
