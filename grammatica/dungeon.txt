@@ -79,10 +79,18 @@ LUCE ::= M: (
             )
 ;
 
-FONTELUCE ::= ( torce | candele | fuochi fatui )
+FONTELUCE ::= ( torce 
+              | candele 
+              | fuochi fatui
+              | feritoie
+              )
 ;
 
-ATMOSFERA ::= ( nebbia | fumo | ombre | echi )
+ATMOSFERA ::= ( nebbia 
+              | fumo 
+              | ombre 
+              | echi 
+              )
 ;
 
 Descrizionest ::= ST1^ "<br>" ^COSE^ "<br>" ^Osservi;
@@ -115,7 +123,7 @@ COSE ::= ci sono delle casse di legno ammuffite accatastate a forma di piramide^
 | un mucchio di vestiti gettati a casaccio emana prepotente odore di sterco di MOB.N ^"."
 | sul pavimento riesci a distinguere un mosaico che reca scritta in tutte le lingue la parola ^(\\MOB.N | \\ARIA | CAMICIA) ^"."
 | al centro della stanza c'^"&egrave" una statua velata dalle forme inquietanti ^"." \\sul basamento c'^"&egrave" scritto ^(\\MOB.N | \\ARIA | CAMICIA) ^"."
-| sulla parete est poggia una enoteca contenente un grande numero di diverse qualit^"&agrave" di vino e liquori, tra i quali noti il famoso liquore LIQUORE^"."
+| sulla parete est poggia un'enoteca contenente un grande numero di diverse qualit^"&agrave" di vino e liquori ^"," tra i quali noti il famoso liquore LIQUORE^"."
 ;
 
 ODORE ::= M: (piscio
@@ -124,14 +132,16 @@ ODORE ::= M: (piscio
         | zafferano
         | letame
         | sterco
-        | sangue )
+        | sangue 
+        )
         |
         F: (merda
         | acqua
         | colla
         | panna
         | gloria
-        | paura)
+        | paura
+        )
 ;
 
 AGG ::= M: (scarno
@@ -169,49 +179,49 @@ AGG ::= M: (scarno
 
 SPADA ::= S: SPADA1.S [AGGETTIVOO] [DACHE] | N: SPADA1.N [AGGETTIVOO] [DACHE];
 SPADA1 ::= (S:una | N:_) spada
-       | (S:una | N:_)"betoniera giocattolo"
-       | (S:una | N:_)"marionetta di" MOB.S
-       | (S:una | N:_)sciabola
-       | (S:una | N:_)"tonnellata di tritolo"
-       | (S:una | N:_)borsa
-       | (S:una | N:_)"lavagna luminosa"
-       | (S:una | N:_)"penna a sfera"
-       | (S:una | N:_)pirofila
-       | (S:una | N:_)"vasca da bagno"
-       | (S:una | N:_)bisarca
-       | (S:una | N:_)torcia
-       | (S:una | N:_)lampadina
-       | (S:una | N:_)zimarra
-       | (S:una | N:_)sedia
-       | (S:una | N:_)cassa
-       | (S:una | N:_)panchina
-       | (S:una | N:_)stuoia
+       | (S:una | N:_) betoniera giocattolo
+       | (S:una | N:_) marionetta di MOB.S
+       | (S:una | N:_) sciabola
+       | (S:una | N:_) tonnellata di tritolo
+       | (S:una | N:_) borsa
+       | (S:una | N:_) lavagna luminosa
+       | (S:una | N:_) penna a sfera
+       | (S:una | N:_) pirofila
+       | (S:una | N:_) vasca da bagno
+       | (S:una | N:_) bisarca
+       | (S:una | N:_) torcia
+       | (S:una | N:_) lampadina
+       | (S:una | N:_) zimarra
+       | (S:una | N:_) sedia
+       | (S:una | N:_) cassa
+       | (S:una | N:_) panchina
+       | (S:una | N:_) stuoia
 ;
 
-AGGETTIVOO ::= "dalla lama nera"
-           | "dal colore indefinito"
-           | "con una grossa pezza"
-           | "di peltro"
-           | "di ferro"
-           | "di fluorite"
-           | "di gomma"
+AGGETTIVOO ::= dalla lama nera
+           | dal colore indefinito
+           | con una grossa pezza
+           | di peltro
+           | di ferro
+           | di fluorite
+           | di gomma
            | di velluto
            | di maglia
-           | "di vetro"
-           | "di maglia"
-           | "di lana"
-           | "di quel metallo elfico che nessuno sapeva forgiare"
-           | "di zinco"
-           | "d'argento"
+           | di vetro
+           | di maglia
+           | di lana
+           | di quel metallo elfico che nessuno sapeva forgiare
+           | di zinco
+           | d'argento
            | di AGG.M legno [-AGGETTIVOO]
-           | "di cristallo"
-           | "di canapa"
-           | "di mogano"
-           | "di tela"
-           | "di canne"
+           | di cristallo
+           | di canapa
+           | di mogano
+           | di tela
+           | di canne
 ;
 
-MOB ::= (S:_ | N:_)"Ignatius"
+MOB ::= (S:_ | N:_) \\ignatius
         | (S:un | N:_)bardo
         | (S:un | N:_)mendicante
         | (S:il | N:_)\varuna \nero
@@ -220,7 +230,7 @@ MOB ::= (S:_ | N:_)"Ignatius"
         | (S:un | N:_)cavallo (COLORE.S)
         | (S:un | N:_)topo muschiato
         | (S:_ | N:_)\valorm
-        | (S:_ | N:_)"Tolvaas"
+        | (S:_ | N:_)\\tolvaas
         | (S:l' | N:_)araldo
         | (S:un | N:_)gallo
         | (S:un | N:_)leone
@@ -241,11 +251,11 @@ MOB ::= (S:_ | N:_)"Ignatius"
 COLORE ::= (P: COLORE1.P [TONO.P] | S: COLORE1.S [TONO.S] | F: COLORE1.F [TONO.F]);
 COLORE1 ::=
 P: (neri | gialli | verdi | blu | azzurri | biondi | castani | rossi
-   | arancioni | "a pois" | rosa | marroni | viola | bruni) |
+   | arancioni | a pois | rosa | marroni | viola | bruni) |
 S: (nero | giallo | verde | blu | azzurro | biondo | castano | rosso
-   | arancione | "a pois" | rosa | marrone | viola | bruno) |
+   | arancione | a pois | rosa | marrone | viola | bruno) |
 F: (nera | gialla | verde | blu | azzurra | bionda | castana | rossa
-   | arancione | "a pois" | rosa | marrone | viola | bruna)
+   | arancione | a pois | rosa | marrone | viola | bruna)
 ;
 
 TONO ::= P: (scuri | chiari | ramati | meshati ) |
@@ -257,7 +267,7 @@ ARIA ::= beffarda | sorniona | idiota | intelligente | losca | furba;
 
 CAMICIA ::= CAMICIA1 [AGGETTIVOO] [DACHE];
 
-CAMICIA1 ::= "camicia" | "zimarra" | "sciarpa" | "tunica"  | "giacchetta" | "giacca";
+CAMICIA1 ::= camicia | zimarra | sciarpa | tunica | giacchetta | giacca ;
 
 PARTE ::= al polpaccio | alla gamba (POS.F) | al piede (POS.M)
           | alla testa | al braccio (POS.M)
@@ -270,57 +280,57 @@ PARTE ::= al polpaccio | alla gamba (POS.F) | al piede (POS.M)
 
 POS ::= M:(destro | sinistro) | F:(destra | sinistra);
 
-LIQUORE ::= "Lo stura" CAMICIA | MOB.N;
+LIQUORE ::= \\lo stura" CAMICIA | MOB.N;
 
 NUM ::= UNIT[^ZERI^];
 UNIT ::= 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 ;
 ZERI ::= 0 | 00 | 000 | 0000;
 BIVI ::= 2 | 3 | 4 ;
 
-Osservi ::= "osservi la stanza e vedi" Varco "." "\n\n"
-  [ "Inoltre a ben vedere c'e' anche" Varco2 "\n\n" Opzione2 ] "\n\n" Opzione1 "\n\n" Opzione3;
+Osservi ::= osservi la stanza e vedi Varco ^"." "<br>"
+  [ \\inoltre a ben vedere c'^"&egrave" anche Varco2 "<br>" Opzione2 ] "<br>" Opzione1 "<br>" Opzione3;
 
-Varco := Tipo.Basso "sul" Posto.Pav
-      | Tipo.Lato "sulla" Posto.Pareti
-      | Tipo.Alto "nel" Posto.Soff  ;
+Varco := Tipo.Basso sul Posto.Pav
+      | Tipo.Lato sulla Posto.Pareti
+      | Tipo.Alto nel Posto.Soff  ;
 
-Tipo ::= Alto: "un"
+Tipo ::= Alto: un
                ( pozzo (di pietra | di melma | _)
                | buco (regolare | irregolare | _)
                | foro (gocciolante | _))
-     | Basso: "una" (botola ( di legno | di ferro | _)
+     | Basso: una (botola ( di legno | di ferro | _)
               | fossa (puzzolente | recente |_))
-     | Basso: "un" avvallamento
-     | Lato: "una" ( porta (borchiata | di rame | di legno | _)
+     | Basso: un avvallamento
+     | Lato: una ( porta (borchiata | di rame | di legno | _)
              | finestra (con le grate che sembra dare su un abisso | _))
-     | Lato: "un" ( portone (istoriato | di quercia | _)
+     | Lato: un ( portone (istoriato | di quercia | _)
              | portale (di marmo| con simboli arcani | _)
              | passaggio (stretto | _)
-             | cunicolo (poco piu' largo di una tana di cinghiali | _)
+             | cunicolo (poco pi^"&ugrave" largo di una tana di cinghiali | _)
              )
      ;
 Posto ::= (Soff: soffitto
           | Pav: pavimento
           | Pareti: parete) ;
 
-Varco2 := Tipo.Basso "sul" Posto.Pav
-      | Tipo.Lato "sulla" Posto.Pareti
-      | Tipo.Alto "nel" Posto.Soff;
+Varco2 := Tipo.Basso sul Posto.Pav
+      | Tipo.Lato sulla Posto.Pareti
+      | Tipo.Alto nel Posto.Soff;
 
 
 
 
-Opzione1 ::= "<i><a href"^UG^"dungeon.php>" Pzione1 ^"</a></i>"
+Opzione1 ::= "<i><a href=dungeon.html>" Pzione1 ^"</a></i>"
 ;
-Pzione1 ::= "imbocca" Varco
+Pzione1 ::= imbocca Varco
 ;
-Opzione2 ::= "<i><a href"^UG^"dungeon.php>" Pzione2 ^"</a></i>"
+Opzione2 ::= "<i><a href=dungeon.html>" Pzione2 ^"</a></i>"
 ;
-Pzione2 ::= "imbocca" Varco2
+Pzione2 ::= imbocca Varco2
 ;
-Opzione3 ::= "<i><a href=\".\"" ^">" Pzione3 ^"</a></i>"
+Opzione3 ::= "<i><a href= >" Pzione3 ^"</a></i>"
 ;
-Pzione3 ::= "basta diocane!" | "ma vai a cagare!" | "squallido nerd io me ne vado"
+Pzione3 ::= basta diocane^"!" | ma vai a cagare^"!" | squallido nerd io me ne vado^"."
 ;
 
 
