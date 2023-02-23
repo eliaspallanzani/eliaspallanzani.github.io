@@ -18,28 +18,29 @@ Nomestanza ::= ( N1.M [ LUCE.M ]
 ;
 
 N1 ::= M: (un corridoio lungo NUM metri
-       | uno stanzino di BIVI x 1 metri
-       | un incrocio con BIVI biforcazioni
-       | un pianerottolo
-       | un cunicolo
-       | uno studio )
+          | uno stanzino di BIVI x 1 metri
+          | un incrocio con BIVI biforcazioni
+          | un pianerottolo
+          | un cunicolo
+          | uno studio 
+          )
        |
-   F: ( una stanza >DACHE di NUM x NUM metri
-      | una cloaca
-      | una palestra ( di scherma | per gladiatori )
-      | una cucina ( sporca | abbandonata | depredata | col fuoco acceso )
-      | una camera >DACHE
-      | la stalla  ( dei maiali | dei cinghiali | dei dragonzoli )
-      | la piazza ( sotterranea | dei lamenti | delle statue )
-      | la fortezza
-      | la caserma
-      | la cantina ( sporca | abbandonata | depredata | ricchissima )
-      | una caverna ( di basalto | di arenaria | piena di stalattiti )
+       F: ( una stanza >DACHE di NUM x NUM metri
+          | una cloaca
+          | una palestra ( di scherma | per gladiatori )
+          | una cucina ( sporca | abbandonata | depredata | col fuoco acceso )
+          | una camera >DACHE
+          | la stalla  ( dei maiali | dei cinghiali | dei dragonzoli )
+          | la piazza ( sotterranea | dei lamenti | delle statue )
+          | la fortezza
+          | la caserma
+          | la cantina ( sporca | abbandonata | depredata | ricchissima )
+          | una caverna ( di basalto | di arenaria | piena di stalattiti )
       )
 ;
 DACHE ::= da letto
    | da allenamento
-   | daa pranzo
+   | da pranzo
    | della \\ notte
    | da bagno
    | della musica
@@ -123,60 +124,66 @@ COSE ::= ci sono delle casse di legno ammuffite accatastate a forma di piramide^
 | c'^"&egrave" un tavolo di legno con quattro sedie scompagnate stile cena dallo sceriffo di Nottingham^"."
 | alla parete c'^"&egrave" una libreria con tomi dalle seriche copertine ^"."
 | un mucchio di vestiti gettati a casaccio emana prepotente odore di sterco di MOB.N ^"."
-| sul pavimento riesci a distinguere un mosaico che reca scritta in tutte le lingue la parola ^(\\MOB.N | \\ARIA | CAMICIA) ^"."
-| al centro della stanza c'^"&egrave" una statua velata dalle forme inquietanti ^"." \\sul basamento c'^"&egrave" scritto ^(\\MOB.N | \\ARIA | CAMICIA) ^"."
+| sul pavimento riesci a distinguere un mosaico che reca scritta in tutte le lingue la parola '(\\MOB.N | \\ARIA | CAMICIA)' ^"."
+| al centro della stanza c'^"&egrave" una statua velata dalle forme inquietanti ^"." \\sul basamento c'^"&egrave" scritto '(\\MOB.N | \\ARIA | \\CAMICIA)' ^"."
 | sulla parete est poggia un'enoteca contenente un grande numero di diverse qualit^"&agrave" di vino e liquori ^"," tra i quali noti il famoso liquore LIQUORE^"."
 ;
 
-ODORE ::= M: (piscio
-        | zolfo
-        | muschio
-        | zafferano
-        | letame
-        | sterco
-        | sangue 
-        )
-        |
-        F: (merda
-        | acqua
-        | colla
-        | panna
-        | gloria
-        | paura
-        )
+ODORE ::= (M: (piscio
+             | zolfo
+             | muschio
+             | zafferano
+             | letame
+             | sterco
+             | sangue 
+             | pummarola
+             )
+          |
+          F: (merda
+             | acqua
+             | colla
+             | cipolla
+             | panna
+             | gloria
+             | paura
+             )
+           )
 ;
 
-AGG ::= M: (scarno
-        | alto
-        | basso
-        | formoso
-        | baffuto
-        | gobbo
-        | puzzolente
-        | pustoloso
-        | enorme
-        | grezzo
-        | povero
-        | robusto
-        | muscoloso
-        | massiccio
-        | peloso)
+AGG ::= (M: (scarno
+            | alto
+            | basso
+            | formoso
+            | baffuto
+            | gobbo
+            | puzzolente
+            | pustoloso
+            | enorme
+            | grezzo
+            | povero
+            | robusto
+            | muscoloso
+            | massiccio
+            | peloso
+            )
         |
         F: (scarna
-        | alta
-        | bassa
-        | formosa
-        | baffuta
-        | gobba
-        | puzzolente
-        | pustolosa
-        | enorme
-        | grezza
-        | povera
-        | robusta
-        | muscolosa
-        | massiccia
-        | pelosa)
+           | alta
+           | bassa
+           | formosa
+           | baffuta
+           | gobba
+           | puzzolente
+           | pustolosa
+           | enorme
+           | grezza
+           | povera
+           | robusta
+           | muscolosa
+           | massiccia
+           | pelosa
+           )
+        )
 ;
 
 SPADA ::= S: SPADA1.S [AGGETTIVOO] [DACHE] | N: SPADA1.N [AGGETTIVOO] [DACHE];
@@ -269,32 +276,61 @@ ARIA ::= beffarda | sorniona | idiota | intelligente | losca | furba;
 
 CAMICIA ::= CAMICIA1 [AGGETTIVOO] [DACHE];
 
-CAMICIA1 ::= camicia | zimarra | sciarpa | tunica | giacchetta | giacca ;
-
-PARTE ::= al polpaccio | alla gamba (POS.F) | al piede (POS.M)
-          | alla testa | al braccio (POS.M)
-          | alla zimarra [(POS.F)] | al petto | alla mano (POS.F)
-          | all'occhio (POS.M) | all'inguine | alla fungia
-          | all'orecchio (POS.M)
-          | al (mignolo | anulare | medio | indice | pollice) (del piede (POS.M)
-          | della mano (POS.F))
+CAMICIA1 ::= ( camicia 
+             | zimarra 
+             | sciarpa 
+             | tunica 
+             | giacchetta 
+             | giacca
+             )
 ;
 
-POS ::= M:(destro | sinistro) | F:(destra | sinistra);
+PARTE ::= ( al polpaccio 
+          | alla gamba (POS.F) 
+          | al piede (POS.M)
+          | alla testa 
+          | al braccio (POS.M)
+          | alla zimarra [(POS.F)] 
+          | al petto 
+          | alla mano (POS.F)
+          | all'occhio (POS.M) 
+          | all'inguine 
+          | alla fungia
+          | all'orecchio (POS.M)
+          | al (mignolo 
+               | anulare 
+               | medio 
+               | indice 
+               | pollice
+               ) 
+                 (del piede (POS.M)
+                 | della mano (POS.F)
+                 )
+         )
+;
 
-LIQUORE ::= \\lo stura CAMICIA | MOB.N;
+POS ::= (M:(destro 
+           | sinistro
+           ) 
+        | F:(destra 
+            | sinistra
+            )
+        )
+;
+
+LIQUORE ::= \\lo stura (CAMICIA | MOB.N);
 
 NUM ::= UNIT[^ZERI^];
-UNIT ::= 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 ;
-ZERI ::= 0 | 00 | 000 | 0000;
-BIVI ::= 2 | 3 | 4 ;
+UNIT ::= (1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9) ;
+ZERI ::= (0 | 00 | 000 | 0000);
+BIVI ::= (2 | 3 | 4) ;
 
 Osservi ::= osservi la stanza e vedi Varco ^"." "<br>"
   [ \\inoltre a ben vedere c'^"&egrave" anche Varco2 "<br>" Opzione2 ] "<br>" Opzione1 "<br>" Opzione3;
 
-Varco := Tipo.Basso sul Posto.Pav
+Varco := ( Tipo.Basso sul Posto.Pav
       | Tipo.Lato sulla Posto.Pareti
-      | Tipo.Alto nel Posto.Soff  ;
+      | Tipo.Alto nel Posto.Soff ) ;
 
 Tipo ::= Alto: un
                ( pozzo (di pietra | di melma | _)
@@ -313,7 +349,9 @@ Tipo ::= Alto: un
      ;
 Posto ::= (Soff: soffitto
           | Pav: pavimento
-          | Pareti: parete) ;
+          | Pareti: parete
+          ) 
+;
 
 Varco2 := Tipo.Basso sul Posto.Pav
       | Tipo.Lato sulla Posto.Pareti
@@ -321,16 +359,15 @@ Varco2 := Tipo.Basso sul Posto.Pav
 
 
 
-
-Opzione1 ::= "<i><a href=dungeon.html>" Pzione1 ^"</a></i>"
+Opzione1 ::= "<i><a href=dungeon.html>" Pzione1 ^"</a></i><br>"
 ;
 Pzione1 ::= imbocca Varco
 ;
-Opzione2 ::= "<i><a href=dungeon.html>" Pzione2 ^"</a></i>"
+Opzione2 ::= "<i><a href=dungeon.html>" Pzione2 ^"</a></i><br>"
 ;
 Pzione2 ::= imbocca Varco2
 ;
-Opzione3 ::= "<i><a href= >" Pzione3 ^"</a></i>"
+Opzione3 ::= "<i><a href= >" Pzione3 ^"</a></i><br>"
 ;
 Pzione3 ::= basta diocane^"!" | ma vai a cagare^"!" | squallido nerd io me ne vado^"."
 ;
