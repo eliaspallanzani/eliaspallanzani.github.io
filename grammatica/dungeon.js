@@ -95,7 +95,7 @@ ATMOSFERA ::= ( nebbia
               )
 ;
 
-Descrizionest ::= ST1^ "<br>" ^COSE^ "<br>" ^Osservi;
+Descrizionest ::= ST1^ "<br>" \\^COSE^ "<br>" \\^Osservi;
 
 ST1 ::= "&egrave" piuttosto AGG.F e AGG.F"."
 | \\al centro c' ^"&egrave" un grande disco translucido, quasi fosse una
