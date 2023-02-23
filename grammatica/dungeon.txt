@@ -1,85 +1,115 @@
-I ::= "title: dungeon\n"
-      ^"author: Spallanzani da DevNull\n"
-      ^"language: italian\n"
-      ^"status: refinable\n"
-      ^"topic: mah\n"
-      ^"comment: un generatore di stanze dungeon\n"
+I ::= "title: dungeon\\n"
+      ^"author: Spallanzani Elia\\n"
+      ^"language: italian\\n"
+      ^"status: refinable\\n"
+      ^"topic: mah\\n"
+      ^"comment: un generatore di stanze dungeon\\n"
 ;
 
-S ::= "sei in" Nomestanza ^"." "\n\n" Descrizionest "\n\n"  ;
+S ::= \\ sei in Nomestanza ^"." "<br>"
+\\ Descrizionest "<br>"
+;
 
-Nomestanza ::= ( N1.M [ LUCE.M ] | N1.F [ LUCE.F ]);
+Nomestanza ::= ( N1.M [ LUCE.M ] 
+               | N1.F [ LUCE.F ]
+               )
+;
 
-N1 ::= M: ("Un corridoio lungo" NUM "metri"
+N1 ::= M: (un corridoio lungo NUM metri
        | uno stanzino di BIVI x 1 metri
        | un incrocio con BIVI biforcazioni
        | un pianerottolo
        | un cunicolo
        | uno studio )
        |
-   F: ( "Una stanza" >DACHE "di" NUM "x" NUM "metri"
-      | "Una cloaca"
-      | "Una Palestra" ( di scherma | per gladiatori )
-      | "Una Cucina" ( sporca | abbandonata | depredata | col fuoco acceso )
-      | "Una Camera" >DACHE
-      | "La Stalla"  ( dei maiali | dei cinghiali | dei dragonzoli )
-      | "La Piazza" ( "Sotterranea" | dei lamenti | delle statue )
-      | "La Fortezza"
-      | "La Caserma"
-      | "La Cantina" ( sporca | abbandonata | depredata | ricchissima )
-      | "Una Caverna" ( di basalto | di arenaria | piena di stalattiti )
+   F: ( una stanza >DACHE di NUM x NUM metri
+      | una cloaca
+      | una palestra ( di scherma | per gladiatori )
+      | una cucina" ( sporca | abbandonata | depredata | col fuoco acceso )
+      | una camera >DACHE
+      | la stalla  ( dei maiali | dei cinghiali | dei dragonzoli )
+      | la piazza" ( sotterranea | dei lamenti | delle statue )
+      | la fortezza
+      | la caserma
+      | la cantina ( sporca | abbandonata | depredata | ricchissima )
+      | una caverna ( di basalto | di arenaria | piena di stalattiti )
       )
 ;
-DACHE ::= "da letto"
-   | "da Allenamento"
-   | "da pranzo"
-   | "della Notte"
-   | "da bagno"
-   | "della musica"
-   | "del" MOB.N
-   | "dei Tappeti"
-   | "del Focolare"
-   | "della Giustizia"
-   | "militare"
-   | "principale"
+DACHE ::= da letto
+   | da allenamento
+   | daa pranzo
+   | della \\ notte
+   | da bagno
+   | della musica
+   | del MOB.N
+   | dei \\ tappeti
+   | del \\ focolare
+   | della \\ giustizia
+   | militare
+   | principale
 ;
 
-LUCE ::= M: ( ( buio | semibuio | del tutto buio )
-         | ( illuminato da | privo di ) FONTELUCE
-         | (con un poco di | pieno di ) ATMOSFERA )
-         | F: ( ( buia | semibuia | del tutto buia )
-      | ( illuminata da | priva di ) FONTELUCE
-      | (con un poco di | pieno di ) ATMOSFERA)
+LUCE ::= M: ( 
+                ( buio 
+                | semibuio 
+                | del tutto buio 
+                )
+            | 
+                ( illuminato da 
+                | privo di 
+                ) FONTELUCE
+            | 
+                (con un poco di 
+                | pieno di 
+                ) ATMOSFERA 
+            )
+       | F: ( 
+                ( buia 
+                | semibuia 
+                | del tutto buia 
+                )
+            | 
+                ( illuminata da 
+                | priva di 
+                ) FONTELUCE
+            | 
+                (con un poco di 
+                | pieno di 
+                ) ATMOSFERA
+            )
 ;
 
-FONTELUCE ::= ( torce | candele );
-ATMOSFERA ::= ( nebbia | fumo | ombre );
-
-Descrizionest ::= ST1^"\n" ^COSE^"\n\n" ^Osservi;
-
-ST1 ::= e' piuttosto AGG.F e AGG.F"."
-| \al centro c'e' un grande disco translucido, quasi fosse una
-lastra di ghiaccio posata su un abisso senza fine"."
-| \sei ad un incrocio tra un corso principale ed una strada secondaria"."
-| \probabilmente ti trovi in prossimita' di uno degli accessi al secondo livello"."
-| \non ricordi di aver visto prima questo luogo sinistro"."
-| \le pareti sono screpolate e fanno temere un crollo"."
-| \un odore di ( ODORE.M | ODORE.F ) ti riempie le narici"."
-| \si direbbe che qui ci fosse una stalla"."
-| \e' proprio il posto adatto per un agguato"."
-| "il pavimento scintilla come se fosse cosparso da schegge di mica."
-| "Vedi una scala" AGGETTIVOO "che conduce verso la parte piu' bassa del labirinto'"
-| "la pavimentazione e' fatta di lastre" AGGETTIVOO"."
-| "il soffitto sembra di granito e con il pavimento" AGGETTIVOO^"."
-| "c'e' una sorta di" AGG.M "e" AGG.M "ponte" AGGETTIVOO "oltrepassa il fossato riempito di melma e acqua."
-| "Stai percorrendo un" AGG.M ["e" AGG.M] "ponte" AGGETTIVOO^"."
-| N1 e' una stanza non molto AGG.F^"."
-| \contiene solo degli scaffali sui quali poggiano sacchi di (SPADA.N | CAMICIA)
-| "Pavimento e soffitto sono" AGGETTIVOO "mentre i muri rimangono" AGGETTIVOO^"."
+FONTELUCE ::= ( torce | candele | fuochi fatui )
 ;
 
-COSE ::= "Ci sono delle casse di legno ammuffite accatastate a forma di piramide."
-| "Un camino spento fa bella mostra di se' in un angolo."
+ATMOSFERA ::= ( nebbia | fumo | ombre | echi )
+;
+
+Descrizionest ::= ST1^ "<br>" ^COSE^ "<br>" ^Osservi;
+
+ST1 ::= "&egrave" piuttosto AGG.F e AGG.F"."
+| \\al centro c' ^"&egrave" un grande disco translucido, quasi fosse una
+lastra di ghiaccio posata su un abisso senza fine^"."
+| \\sei ad un incrocio tra un corso principale ed una strada secondaria^"."
+| \\probabilmente ti trovi in prossimit ^"&agrave" di uno degli accessi al secondo livello^"."
+| \\non ricordi di aver visto prima questo luogo sinistro^"."
+| \\le pareti sono screpolate e fanno temere un crollo^"."
+| \\un odore di ( ODORE.M | ODORE.F ) ti riempie le narici^"."
+| \\si direbbe che qui ci fosse una stalla^"."
+| \\  proprio il posto adatto per un agguato^"."
+| \\il pavimento scintilla come se fosse cosparso da schegge di mica^"."
+| \\vedi una scala AGGETTIVOO che conduce verso la parte pi^"&ugrave" bassa del labirinto^"."
+| \\a pavimentazione "&egrave" fatta di lastre AGGETTIVOO^"."
+| \\il soffitto sembra di granito e con il pavimento AGGETTIVOO^"."
+| \\c'^"&egrave" una sorta di AGG.M e AGG.M ponte AGGETTIVOO oltrepassa il fossato riempito di melma e acqua^"."
+| \\stai percorrendo un AGG.M [e AGG.M] ponte AGGETTIVOO^"."
+| N1 "&egrave" una stanza non molto AGG.F^"."
+| \\contiene solo degli scaffali sui quali poggiano sacchi di (SPADA.N | CAMICIA) ^"."
+| \\pavimento e soffitto sono AGGETTIVOO mentre i muri rimangono AGGETTIVOO^"."
+;
+
+COSE ::= ci sono delle casse di legno ammuffite accatastate a forma di piramide^"."
+| un camino spento fa bella mostra di s^"&eacute" in un angolo^"."
 | "C'e' un tavolo di legno con quattro sedie scompagnate stile cena dallo sceriffo di Nottingham."
 | "Alla parete c'e' una libreria con tomi dalle seriche copertine."
 | "Un mucchio di vestiti gettati a casaccio emana prepotente odore di sterco di" MOB.N"."
