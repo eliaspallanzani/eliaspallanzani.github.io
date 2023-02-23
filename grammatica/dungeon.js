@@ -27,10 +27,10 @@ N1 ::= M: (un corridoio lungo NUM metri
    F: ( una stanza >DACHE di NUM x NUM metri
       | una cloaca
       | una palestra ( di scherma | per gladiatori )
-      | una cucina" ( sporca | abbandonata | depredata | col fuoco acceso )
+      | una cucina ( sporca | abbandonata | depredata | col fuoco acceso )
       | una camera >DACHE
       | la stalla  ( dei maiali | dei cinghiali | dei dragonzoli )
-      | la piazza" ( sotterranea | dei lamenti | delle statue )
+      | la piazza ( sotterranea | dei lamenti | delle statue )
       | la fortezza
       | la caserma
       | la cantina ( sporca | abbandonata | depredata | ricchissima )
@@ -282,7 +282,7 @@ PARTE ::= al polpaccio | alla gamba (POS.F) | al piede (POS.M)
 
 POS ::= M:(destro | sinistro) | F:(destra | sinistra);
 
-LIQUORE ::= \\lo stura" CAMICIA | MOB.N;
+LIQUORE ::= \\lo stura CAMICIA | MOB.N;
 
 NUM ::= UNIT[^ZERI^];
 UNIT ::= 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 ;
