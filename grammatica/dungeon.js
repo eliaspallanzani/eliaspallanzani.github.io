@@ -10,6 +10,7 @@ I ::= "title: dungeon\\n"
 
 S ::= \\ sei in Nomestanza ^"." "<br>"
 \\ Descrizionest "<br>"
+\\ vedi Spada
 ;
 
 Nomestanza ::= ( N1.M [ LUCE.M ] 
@@ -25,7 +26,7 @@ N1 ::= M: un (corridoio lungo NUM metri
           | ^o studio 
           )
        |
-       F: una ( stanza >DACHE di NUM x NUM metri
+       F: una ( stanza >DACHE di NUM metri x NUM
           | cloaca
           | palestra ( di scherma | per gladiatori )
           | cucina ( sporca | abbandonata | depredata | col fuoco acceso )
@@ -53,7 +54,7 @@ DACHE ::= da letto
 ;
 
 LUCE ::= M: ( 
-                ( [(semi|del tutto)]buio  
+                ( [(semi|del tutto)] buio  
                 )
             | 
                 ( illuminato da 
@@ -110,7 +111,7 @@ lastra di ghiaccio posata su un abisso senza fine^"."
 | \\vedi una scala AGGETTIVOO che conduce verso la parte pi^"&ugrave" bassa del labirinto^"."
 | \\a pavimentazione "&egrave" fatta di lastre AGGETTIVOO^"."
 | \\il soffitto sembra di granito e con il pavimento AGGETTIVOO^"."
-| \\c'^"&egrave" una sorta di AGG.M e AGG.M ponte AGGETTIVOO oltrepassa il fossato riempito di melma e acqua^"."
+| \\c'^"&egrave" una sorta di AGG.M e AGG.M ponte AGGETTIVOO che oltrepassa il fossato riempito di melma e acqua^"."
 | \\stai percorrendo un AGG.M [e AGG.M] ponte AGGETTIVOO^"."
 | N1 "&egrave" una stanza non molto AGG.F^"."
 | \\contiene solo degli scaffali sui quali poggiano sacchi di (SPADA.N | CAMICIA) ^"."
@@ -118,13 +119,13 @@ lastra di ghiaccio posata su un abisso senza fine^"."
 ;
 
 COSE ::= ci sono delle casse di legno ammuffite accatastate a forma di piramide^"."
-| un camino spento fa bella mostra di s^"&eacute" in un angolo^"."
-| c'^"&egrave" un tavolo di legno con quattro sedie scompagnate stile cena dallo sceriffo di Nottingham^"."
-| alla parete c'^"&egrave" una libreria con tomi dalle seriche copertine ^"."
-| un mucchio di vestiti gettati a casaccio emana prepotente odore di sterco di MOB.N ^"."
-| sul pavimento riesci a distinguere un mosaico che reca scritta in tutte le lingue la parola '(\\MOB.N | \\ARIA | CAMICIA)' ^"."
+| un camino ( spento | acceso ) fa bella mostra di s^"&eacute" in un angolo^"."
+| c'^"&egrave" un tavolo di legno con BIVI sedie scompagnate [stile cena dallo sceriffo di Nottingham]^"."
+| alla parete c'^"&egrave" una libreria con tomi dalle {(seriche|sporche|lacere} {copertine} ^"."
+| un mucchio di (stracci | vestiti) gettati a casaccio emana prepotente odore di sterco di MOB.N ^"."
+| sul pavimento riesci a distinguere un mosaico che reca scritta [in tutte le lingue] la parola '(\\MOB.N | \\ARIA | CAMICIA)' ^"."
 | al centro della stanza c'^"&egrave" una statua velata dalle forme inquietanti ^"." \\sul basamento c'^"&egrave" scritto '(\\MOB.N | \\ARIA | \\CAMICIA)' ^"."
-| sulla parete est poggia un'enoteca contenente un grande numero di diverse qualit^"&agrave" di vino e liquori ^"," tra i quali noti il famoso liquore LIQUORE^"."
+| sulla parete DIREZIONE poggia un'enoteca contenente un grande numero di diverse qualit^"&agrave" di vino e liquori ^"," tra i quali noti il famoso liquore LIQUORE^"."
 ;
 
 ODORE ::= (M: (piscio
@@ -226,6 +227,9 @@ AGGETTIVOO ::= dalla lama nera
            | di mogano
            | di tela
            | di canne
+;
+
+DIREZIONE ::= sud | nord | est | ovest
 ;
 
 MOB ::= (S:_ | N:_) \\ignatius
