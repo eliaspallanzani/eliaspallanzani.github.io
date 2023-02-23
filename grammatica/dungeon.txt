@@ -110,12 +110,12 @@ lastra di ghiaccio posata su un abisso senza fine^"."
 
 COSE ::= ci sono delle casse di legno ammuffite accatastate a forma di piramide^"."
 | un camino spento fa bella mostra di s^"&eacute" in un angolo^"."
-| "C'e' un tavolo di legno con quattro sedie scompagnate stile cena dallo sceriffo di Nottingham."
-| "Alla parete c'e' una libreria con tomi dalle seriche copertine."
-| "Un mucchio di vestiti gettati a casaccio emana prepotente odore di sterco di" MOB.N"."
-| "Sul pavimento riesci a distinguere un mosaico che reca scritta in tutte le lingue la parola '"^(\MOB.N | \ARIA | CAMICIA)^"'."
-| "Al centro della stanza c'e' una statua velata dalle forme inquietanti. Sul basamento c'e' scritto '"^(\MOB.N | \ARIA | \CAMICIA)^"'."
-| "Sulla parete est poggia una enoteca contenente un grande numero di diverse qualita' di vino e liquori, tra i quali noti il famoso liquore '"LIQUORE^"'."
+| c'^"&egrave" un tavolo di legno con quattro sedie scompagnate stile cena dallo sceriffo di Nottingham^"."
+| alla parete c'^"&egrave" una libreria con tomi dalle seriche copertine ^"."
+| un mucchio di vestiti gettati a casaccio emana prepotente odore di sterco di MOB.N ^"."
+| sul pavimento riesci a distinguere un mosaico che reca scritta in tutte le lingue la parola ^(\\MOB.N | \\ARIA | CAMICIA) ^"."
+| al centro della stanza c'^"&egrave" una statua velata dalle forme inquietanti ^"." \\sul basamento c'^"&egrave" scritto ^(\\MOB.N | \\ARIA | CAMICIA) ^"."
+| sulla parete est poggia una enoteca contenente un grande numero di diverse qualit^"&agrave" di vino e liquori, tra i quali noti il famoso liquore LIQUORE^"."
 ;
 
 ODORE ::= M: (piscio
