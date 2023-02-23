@@ -17,25 +17,25 @@ Nomestanza ::= ( N1.M [ LUCE.M ]
                )
 ;
 
-N1 ::= M: (un corridoio lungo NUM metri
-          | uno stanzino di BIVI x 1 metri
-          | un incrocio con BIVI biforcazioni
-          | un pianerottolo
-          | un cunicolo
-          | uno studio 
+N1 ::= M: un (corridoio lungo NUM metri
+          | ^o stanzino di BIVI x 1 metri
+          | incrocio con BIVI biforcazioni
+          | pianerottolo
+          | cunicolo
+          | ^o studio 
           )
        |
-       F: ( una stanza >DACHE di NUM x NUM metri
-          | una cloaca
-          | una palestra ( di scherma | per gladiatori )
-          | una cucina ( sporca | abbandonata | depredata | col fuoco acceso )
-          | una camera >DACHE
-          | la stalla  ( dei maiali | dei cinghiali | dei dragonzoli )
-          | la piazza ( sotterranea | dei lamenti | delle statue )
-          | la fortezza
-          | la caserma
-          | la cantina ( sporca | abbandonata | depredata | ricchissima )
-          | una caverna ( di basalto | di arenaria | piena di stalattiti )
+       F: una ( stanza >DACHE di NUM x NUM metri
+          | cloaca
+          | palestra ( di scherma | per gladiatori )
+          | cucina ( sporca | abbandonata | depredata | col fuoco acceso )
+          | camera >DACHE
+          | stalla  ( dei maiali | dei cinghiali | dei dragonzoli )
+          | piazza ( sotterranea | dei lamenti | delle statue )
+          | fortezza
+          | caserma
+          | cantina ( sporca | abbandonata | depredata | ricchissima )
+          | caverna ( di basalto | di arenaria | piena di stalattiti )
       )
 ;
 DACHE ::= da letto
@@ -53,9 +53,7 @@ DACHE ::= da letto
 ;
 
 LUCE ::= M: ( 
-                ( buio 
-                | semibuio 
-                | del tutto buio 
+                ( [(semi|del tutto)]buio  
                 )
             | 
                 ( illuminato da 
@@ -99,7 +97,7 @@ ATMOSFERA ::= ( nebbia
 Descrizionest ::= ST1^ "<br>" \\^COSE^ "<br>" \\^Osservi;
 
 ST1 ::= "&egrave" piuttosto AGG.F e AGG.F"."
-| \\al centro c' ^"&egrave" un grande disco translucido, quasi fosse una
+| \\al centro c' ^"&egrave" un grande disco translucido ^"," quasi fosse una
 lastra di ghiaccio posata su un abisso senza fine^"."
 | \\sei ad un incrocio tra un corso principale ed una strada secondaria^"."
 | \\probabilmente ti trovi in prossimit ^"&agrave" di uno degli accessi al secondo livello^"."
